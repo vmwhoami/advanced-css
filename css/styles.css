@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+.header {
+ background: linear-gradient( #e2495163,#e4217c6b),url("/img/oleaA.jpg") 0 30% no-repeat ;
+ background-size: cover;
+ height: 95vh;
+ clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+margin: 20px;
+border-radius: 5px;
+position: relative;
+}
+
+
+
+.logo{
+    position: absolute;
+    top:10%;
+    left: 5%;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+}
+
+.title{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+
+.loveyou{
+    font-size: 15px;
+    margin-top: 20px;
+}
