@@ -38,7 +38,7 @@ position: relative;
 .logo{
     position: absolute;
     top:5%;
-    left:5%;
+    right: 5%;
    font-size: 60px;
     color: rgb(255, 255, 255);
     animation: slidown 1s ease-in-out;
@@ -62,23 +62,30 @@ position: relative;
     left: 50%;
     transform: translate(-50%,-50%);
     padding:40px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px #4e4e4e;
+    letter-spacing: -2px;
     animation: opacity 1s ease;
     border: none;
     border-radius: 5px;
     color: white;
-    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 50% no-repeat;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 70% no-repeat;
     background-size: 75px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
+    transition: .5s;
+    animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
 .btn:hover{
     background-size: 90px;
     font-weight: 700 ;
     text-shadow: 0 1px 4px #4e4e4e;
+    letter-spacing: 0;
+    transition: .5s;
 }
 
 
