@@ -10,20 +10,38 @@ body{
  background: linear-gradient( #e2495163,#e4217c6b),url("/img/oleaA.jpg") 0 30% no-repeat ;
  background-size: cover;
  height: 95vh;
- clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+ clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
 margin: 20px;
 border-radius: 5px;
 position: relative;
 }
+.under{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:url("/img/oleaA.jpg") 0 30% no-repeat ;
+    filter: grayscale(100%) blur(2px);
+    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+ background-size: cover;
+}
 
+.over{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( #e2495163,#e4217c6b);
+    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+
+}
 
 
 .logo{
     position: absolute;
     top:5%;
-    right: 5%;
-    font-size: 60px;
+    left:5%;
+   font-size: 60px;
     color: rgb(255, 255, 255);
+    animation: slidown 1s ease-in-out;
 }
 
 .title{
@@ -36,36 +54,97 @@ position: relative;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
     letter-spacing: 15px;
+    
+}
+.title button{
+    display: inline-block;
+    position: absolute;
+    backface-visibility: hidden;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding:70px;
+    animation: opacity 1s ease;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background:linear-gradient( rgba(235, 46, 46, 0.397),rgba(114, 8, 8, 0.219));
+    clip-path: polygon(50% 30%, 80% 10%, 100% 35%, 95% 68%, 76% 85%, 50% 100%, 21% 86%, 4% 63%, 0 29%, 20% 10%);
+}
+
+.title h1{
+    animation-name: slideleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    backface-visibility: hidden;
 }
 
 .loveyou{
     font-size: 15px;
+    animation-name: slideright;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
     margin-top: 20px;
-}
-
-.content {
-    width: 60vw;
-    height: 50vh;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
-.under{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background:url("/img/oleaA.jpg") 0 30% no-repeat ;
-    filter: grayscale(100%) blur(2px);
-    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
-
- background-size: cover;
-}
-
-.over{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient( #e2495163,#e4217c6b);
-    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+    margin-bottom: 50px;
+   
 
 }
+
+
+/*     animations     */
+@keyframes slideleft{
+    0%{
+opacity: 0;
+transform: translateX(-100px);
+    }
+    90%{
+        transform: translateX(20px);
+    }
+    100%{
+opacity: 1;
+transform: translateX(0);
+    }
+}
+
+
+@keyframes slideright{
+    0%{
+opacity: 0;
+transform: translateX(100px);
+    }
+    90%{
+        transform: translateX(-20px);
+    }
+    100%{
+opacity: 1;
+transform: translateX(0);
+    }
+}
+
+@keyframes slidown{
+    0%{
+opacity: 0;
+transform: translateY(-100px);
+    }
+  
+    100%{
+opacity: 1;
+transform: translateY(0);
+    }
+}
+
+@keyframes opacity{
+    0%{
+opacity: 0;
+
+    }
+  
+    100%{
+opacity: 1;
+
+    }
+}
+
