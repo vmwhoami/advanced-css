@@ -1,9 +1,17 @@
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   box-sizing: inherit;
 }
+html{
+    font-size: 62.5%;
+}
+
 body{
+    box-sizing: border-box;
+    line-height: 1.7;
     font-family: 'Lato', sans-serif;
 }
 .header {
@@ -11,8 +19,8 @@ body{
  background-size: cover;
  height: 95vh;
  clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
-margin: 20px;
-border-radius: 5px;
+margin:1rem 2rem;
+border-radius: .5rem;
 position: relative;
 }
 .under{
@@ -20,7 +28,7 @@ position: relative;
     width: 100%;
     height: 100%;
     background:url("/img/oleaA.jpg") 0 30% no-repeat ;
-    filter: grayscale(100%) blur(5px);
+    filter: grayscale(50%) blur(.8rem);
     clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
  background-size: cover;
 }
@@ -39,7 +47,7 @@ position: relative;
     position: absolute;
     top:5%;
     right: 5%;
-   font-size: 60px;
+   font-size: 6rem;
     color: rgb(255, 255, 255);
     animation: slidown 1s ease-in-out;
 }
@@ -48,12 +56,13 @@ position: relative;
     position: absolute;
     display: inline-block;
     color: white;
-    font-size: 20px;
-    top: 20%;
+    font-size: 2rem;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
-    letter-spacing: 15px;
+    letter-spacing: 1.5rem;
+    text-align: center;
     
 }
 .btn{
@@ -63,17 +72,17 @@ position: relative;
     transform: translate(-50%,-50%);
     padding:40px;
     font-weight: 500;
-    text-shadow: 0 1px 2px #4e4e4e;
-    letter-spacing: -2px;
+    text-shadow: 0 .1rem .2rem #4e4e4e;
+    letter-spacing: -.2rem;
     animation: opacity 1s ease;
     border: none;
-    border-radius: 5px;
+    border-radius: .5rem;
     color: white;
     background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 70% no-repeat;
-    background-size: 75px;
+    background-size: 7.5rem;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     cursor: pointer;
     transition: .5s;
@@ -81,9 +90,9 @@ position: relative;
 }
 
 .btn:hover{
-    background-size: 90px;
+    background-size: 9rem;
     font-weight: 700 ;
-    text-shadow: 0 1px 4px #4e4e4e;
+    text-shadow: 0 .1rem .4rem #4e4e4e;
     letter-spacing: 0;
     transition: .5s;
 }
@@ -98,25 +107,75 @@ position: relative;
 }
 
 .loveyou{
-    font-size: 15px;
+    font-size: 1.5rem;
     animation-name: slideright;
     animation-duration: 1s;
     animation-timing-function: ease-in;
-    margin-top: 20px;
-    margin-bottom: 50px;
-   
-
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
+.btn2:link,
+.btn2:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1.5rem 4rem;
+    border-radius: 50rem;
+    transition: all .2s;
+    letter-spacing: .5rem;
+} 
+
+.btn2:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 .4rem .8rem #30303063;
+}
+
+.btn2:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 .2rem .4rem #30303063;
+}
+.btn2::after{
+    content: "";/* asta e important !*/
+    position: absolute;
+    border-radius: 5rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+}
+.btn-white::after{
+    background-color: #fff;
+}
+.btn2:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    filter: blur(1rem);
+}
+
+.btn-white{
+    color: #2e2e2e;
+    background-color: #fff;
+}
+
+.moveUp {
+animation: moveUp 2s ease-out .75s;
+animation-fill-mode: backwards;
+}
 
 /*     animations     */
 @keyframes slideleft{
     0%{
 opacity: 0;
-transform: translateX(-100px);
+transform: translateX(-10rem);
     }
     90%{
-        transform: translateX(20px);
+        transform: translateX(2rem);
     }
     100%{
 opacity: 1;
@@ -128,10 +187,10 @@ transform: translateX(0);
 @keyframes slideright{
     0%{
 opacity: 0;
-transform: translateX(100px);
+transform: translateX(10rem);
     }
     90%{
-        transform: translateX(-20px);
+        transform: translateX(-2rem);
     }
     100%{
 opacity: 1;
@@ -142,7 +201,7 @@ transform: translateX(0);
 @keyframes slidown{
     0%{
 opacity: 0;
-transform: translateY(-100px);
+transform: translateY(-10rem);
     }
   
     100%{
@@ -151,15 +210,15 @@ transform: translateY(0);
     }
 }
 
-@keyframes opacity{
+@keyframes moveUp{
     0%{
 opacity: 0;
-
+transform: translateY(20rem);
     }
   
     100%{
 opacity: 1;
-
+transform: translateY(0);
     }
 }
 
