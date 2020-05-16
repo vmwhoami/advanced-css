@@ -57,7 +57,7 @@ position: relative;
     display: inline-block;
     color: white;
     font-size: 2rem;
-    top: 25%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
@@ -65,39 +65,56 @@ position: relative;
     text-align: center;
     
 }
-.btn{
+.btn,
+.btn:focus{
+    text-decoration: none;
     display: inline-block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    position: relative;
+    text-shadow: 0 0 .2rem #333333;
     padding:40px;
-    font-weight: 500;
-    text-shadow: 0 .1rem .2rem #4e4e4e;
-    letter-spacing: -.2rem;
-    animation: opacity 1s ease;
+    letter-spacing: .1rem;
     border: none;
-    border-radius: .5rem;
     color: white;
-    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 70% no-repeat;
-    background-size: 7.5rem;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 75% no-repeat;
+    background-size: 10rem;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
-    transition: .5s;
+    transition:all .5s;
     animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
 }
 
-.btn:hover{
-    background-size: 9rem;
-    font-weight: 700 ;
-    text-shadow: 0 .1rem .4rem #4e4e4e;
-    letter-spacing: 0;
-    transition: .5s;
+.btn:active{
+    transform: scale(1.1);
 }
 
+.btn:hover{
+    transform: scale(1.2);
+  
+}
+.btn::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 60% no-repeat;
+    background-size: 10rem;
+    z-index: -1;
+    transition: all .2s;
+}
 
+.btn:hover::after{
+    background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 60% no-repeat;
+    background-size: 11rem;
+    transform: scaleY(1.4) scaleX(1.6);
+    filter: blur(1rem);
+    opacity: 0;
+}
 
 .title h1{
     animation-name: slideleft;
@@ -111,60 +128,12 @@ position: relative;
     animation-name: slideright;
     animation-duration: 1s;
     animation-timing-function: ease-in;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    
 }
 
-.btn2:link,
-.btn2:visited {
-    display: inline-block;
-    text-transform: uppercase;
-    position: relative;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 1.5rem 4rem;
-    border-radius: 50rem;
-    transition: all .2s;
-    letter-spacing: .5rem;
-} 
-
-.btn2:hover{
-    transform: translateY(-.3rem);
-    box-shadow: 0 .4rem .8rem #30303063;
-}
-
-.btn2:active{
-    transform: translateY(-.1rem);
-    box-shadow: 0 .2rem .4rem #30303063;
-}
-.btn2::after{
-    content: "";/* asta e important !*/
-    position: absolute;
-    border-radius: 5rem;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: .4s;
-}
-.btn-white::after{
-    background-color: #fff;
-}
-.btn2:hover::after{
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-    filter: blur(1rem);
-}
-
-.btn-white{
-    color: #2e2e2e;
-    background-color: #fff;
-}
 
 .moveUp {
-animation: moveUp 2s ease-out .75s;
+animation: moveUp .8s ease-out .4s;
 animation-fill-mode: backwards;
 }
 
@@ -213,7 +182,7 @@ transform: translateY(0);
 @keyframes moveUp{
     0%{
 opacity: 0;
-transform: translateY(20rem);
+transform: translateY(10rem);
     }
   
     100%{
