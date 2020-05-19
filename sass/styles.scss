@@ -1,5 +1,5 @@
-@import "variables";
-@import "body";
+@use "variables";
+@use "body";
 
 
 .header {
@@ -126,4 +126,4 @@ animation-fill-mode: backwards;
 
 /*     animations     */
 
-@import "animations"
+@use 'animations'; 
