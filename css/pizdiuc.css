@@ -25,6 +25,7 @@ body {
   border-radius: 0.5rem;
   position: relative;
 }
+
 .header .under {
   position: absolute;
   width: 100%;
@@ -34,6 +35,7 @@ body {
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
   background-size: cover;
 }
+
 .header .over {
   position: absolute;
   width: 100%;
@@ -41,6 +43,7 @@ body {
   background: linear-gradient(#e2495163, #e4217c6b);
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
 }
+
 .header .over .logo {
   position: absolute;
   top: 5%;
@@ -68,7 +71,7 @@ body {
   text-decoration: none;
   display: inline-block;
   position: relative;
-  text-shadow: 0 0 0.2rem #333333;
+  text-shadow: 0 0 0.2rem #333;
   padding: 40px;
   letter-spacing: 0.1rem;
   border: none;
@@ -138,46 +141,53 @@ body {
     opacity: 0;
     transform: translateX(-10rem);
   }
+
   90% {
     transform: translateX(2rem);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 @keyframes slideright {
   0% {
     opacity: 0;
     transform: translateX(10rem);
   }
+
   90% {
     transform: translateX(-2rem);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 @keyframes slidown {
   0% {
     opacity: 0;
     transform: translateY(-10rem);
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes moveUp {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem);
-  }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/*# sourceMappingURL=pizdiuc.css.map */
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
