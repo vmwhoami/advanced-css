@@ -28,17 +28,16 @@ position: relative;
         background: linear-gradient( #e2495163,#e4217c6b);
         clip-path: $main-head-cliping;
 
+        .logo{
+            position: absolute;
+            top:5%;
+            right: 5%;
+           font-size: 6rem;
+            color: rgb(255, 255, 255);
+            animation: slidown 1s ease-in-out;
+        }
     }
-}
-
-
-.logo{
-    position: absolute;
-    top:5%;
-    right: 5%;
-   font-size: 6rem;
-    color: rgb(255, 255, 255);
-    animation: slidown 1s ease-in-out;
+   
 }
 
 .title{
@@ -101,7 +100,6 @@ position: relative;
     background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 60% no-repeat;
     background-size: 11rem;
     transform: scaleY(1.4) scaleX(1.6);
-    /* filter: blur(1rem); */
     opacity: 0;
 }
 
@@ -127,56 +125,5 @@ animation-fill-mode: backwards;
 }
 
 /*     animations     */
-@keyframes slideleft{
-    0%{
-opacity: 0;
-transform: translateX(-10rem);
-    }
-    90%{
-        transform: translateX(2rem);
-    }
-    100%{
-opacity: 1;
-transform: translateX(0);
-    }
-}
 
-
-@keyframes slideright{
-    0%{
-opacity: 0;
-transform: translateX(10rem);
-    }
-    90%{
-        transform: translateX(-2rem);
-    }
-    100%{
-opacity: 1;
-transform: translateX(0);
-    }
-}
-
-@keyframes slidown{
-    0%{
-opacity: 0;
-transform: translateY(-10rem);
-    }
-  
-    100%{
-opacity: 1;
-transform: translateY(0);
-    }
-}
-
-@keyframes moveUp{
-    0%{
-opacity: 0;
-transform: translateY(10rem);
-    }
-  
-    100%{
-opacity: 1;
-transform: translateY(0);
-    }
-}
-
+@import "animations"

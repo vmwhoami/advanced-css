@@ -41,8 +41,7 @@ body {
   background: linear-gradient(#e2495163, #e4217c6b);
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
 }
-
-.logo {
+.header .over .logo {
   position: absolute;
   top: 5%;
   right: 5%;
@@ -111,7 +110,6 @@ body {
   background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 60% no-repeat;
   background-size: 11rem;
   transform: scaleY(1.4) scaleX(1.6);
-  /* filter: blur(1rem); */
   opacity: 0;
 }
 
