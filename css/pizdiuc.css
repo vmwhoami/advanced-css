@@ -1,3 +1,49 @@
+.row {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^=col-] {
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) /2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
+
+.section-about {
+  background-color: #f7f7f7f7;
+  padding: 10rem 0 0;
+  margin-top: -5rem;
+}
+.section-about p {
+  font-size: 1.5rem;
+}
+
 *,
 *::before,
 *::after {
@@ -14,18 +60,17 @@ body {
   box-sizing: border-box;
   line-height: 1.7;
   font-family: "Lato", sans-serif;
+  margin: 1rem 2rem;
 }
 
 .header {
-  background: linear-gradient(#ff080863, #e4217c6b), url("/img/oleaA.jpg") 0 30% no-repeat;
+  background: linear-gradient(#c73c437a, #c5055e91), url("/img/oleaA.jpg") 0 30% no-repeat;
   background-size: cover;
   height: 95vh;
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
-  margin: 1rem 2rem;
   border-radius: 0.5rem;
   position: relative;
 }
-
 .header .under {
   position: absolute;
   width: 100%;
@@ -35,7 +80,6 @@ body {
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
   background-size: cover;
 }
-
 .header .over {
   position: absolute;
   width: 100%;
@@ -43,7 +87,6 @@ body {
   background: linear-gradient(#e2495163, #e4217c6b);
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
 }
-
 .header .over .logo {
   position: absolute;
   top: 5%;
@@ -53,25 +96,12 @@ body {
   animation: slidown 1s ease-in-out;
 }
 
-.title {
-  position: absolute;
-  display: inline-block;
-  color: white;
-  font-size: 2rem;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-transform: uppercase;
-  letter-spacing: 1.5rem;
-  text-align: center;
-}
-
 .btn,
 .btn:focus {
   text-decoration: none;
   display: inline-block;
   position: relative;
-  text-shadow: 0 0 0.2rem #333;
+  text-shadow: 0 0 0.2rem #333333;
   padding: 40px;
   letter-spacing: 0.1rem;
   border: none;
@@ -116,6 +146,78 @@ body {
   opacity: 0;
 }
 
+.btn-text,
+.btn-text:link,
+.btn-text:visited {
+  margin: 2rem 1rem;
+  display: inline-block;
+  color: #e4217c6b;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0 3px 3px;
+  border-bottom: 1px solid #e4217c6b;
+  transition: all 0.2s;
+}
+.btn-text:hover,
+.btn-text:link:hover,
+.btn-text:visited:hover {
+  background: linear-gradient(#c73c437a, #c5055e91);
+  color: white;
+  transform: translateY(-0.5rem);
+  box-shadow: -0.6rem 0.6rem 0.5rem rgba(44, 44, 44, 0.2);
+}
+.btn-text:active,
+.btn-text:link:active,
+.btn-text:visited:active {
+  transform: translateY(-0.2rem);
+  box-shadow: -0.3rem 0.3rem 0.2rem rgba(44, 44, 44, 0.4);
+}
+
+.centering-text {
+  text-align: center;
+}
+
+.composition_img {
+  width: 50%;
+}
+
+.heading-secondary {
+  position: relative;
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: linear-gradient(#c73c437a, #c5055e91);
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skewX(-3deg) translateY(-0.3rem);
+  text-shadow: -0.6rem 0.6rem 0.2rem rgba(44, 44, 44, 0.37);
+}
+
+.theh3 {
+  font-size: 2rem;
+  margin: 2rem 1rem;
+  color: #555;
+}
+
+.title {
+  position: absolute;
+  display: inline-block;
+  color: white;
+  font-size: 2rem;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+  text-align: center;
+}
+
 .title h1 {
   animation-name: slideleft;
   animation-duration: 1s;
@@ -141,53 +243,46 @@ body {
     opacity: 0;
     transform: translateX(-10rem);
   }
-
   90% {
     transform: translateX(2rem);
   }
-
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
-
 @keyframes slideright {
   0% {
     opacity: 0;
     transform: translateX(10rem);
   }
-
   90% {
     transform: translateX(-2rem);
   }
-
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
-
 @keyframes slidown {
   0% {
     opacity: 0;
     transform: translateY(-10rem);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 @keyframes moveUp {
   0% {
     opacity: 0;
     transform: translateY(10rem);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+/*# sourceMappingURL=pizdiuc.css.map */
