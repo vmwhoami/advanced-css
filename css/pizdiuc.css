@@ -12,7 +12,6 @@
   clear: both;
 }
 .row [class^=col-] {
-  background-color: red;
   float: left;
 }
 .row [class^=col-]:not(:last-child) {
@@ -37,6 +36,13 @@
   width: calc(3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem);
 }
 
+.section-about {
+  background-color: #f7f7f7f7;
+  padding: 10rem 0 0;
+  text-align: center;
+  margin-top: -5rem;
+}
+
 *,
 *::before,
 *::after {
@@ -53,6 +59,7 @@ body {
   box-sizing: border-box;
   line-height: 1.7;
   font-family: "Lato", sans-serif;
+  margin: 1rem 2rem;
 }
 
 .header {
@@ -60,7 +67,6 @@ body {
   background-size: cover;
   height: 95vh;
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
-  margin: 1rem 2rem;
   border-radius: 0.5rem;
   position: relative;
 }

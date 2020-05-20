@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixin';
 @import 'floats_grid';
+@import 'home';
 @import "body";
 
 
@@ -11,7 +12,6 @@
     background-size: cover;
     height: 95vh;
     clip-path: $main-head-cliping;
-    margin: 1rem 2rem;
     border-radius: .5rem;
     position: relative;
 
