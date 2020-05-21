@@ -1,7 +1,7 @@
 .section-about {
     background-color: $color-grey-light1;
     height: 100vh;
-    padding: 10rem 0 0;
+    padding: 5rem 0 0;
     margin-top: -5rem;
 
     p {
@@ -12,7 +12,7 @@
 
 //feature section
 .features {
-    height: 100vh;
+    height: 120vh;
     position: relative;
     margin-top: -5rem;
     overflow: hidden;
@@ -55,6 +55,7 @@
         font-size: 5rem;
         background: linear-gradient(#e2495163, #e4217c6b);
         -webkit-background-clip: text;
+        background-clip:text;
         color: transparent;
     }
 

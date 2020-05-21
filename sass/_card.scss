@@ -3,7 +3,8 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 50vh;
-
+   
+//Card functionality
     &-side {
 
         height: 50vh;
@@ -13,6 +14,7 @@
         top: 0;
         left: 0;
         backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 
         &--front {
@@ -22,8 +24,14 @@
         &--back {
             transform: rotateY(180deg);
 
-            &-color {
-                background: linear-gradient(to right bottom, rgb(255, 69, 69), rgb(61, 1, 1));
+            &-color1 {
+                background: $main-grad;
+            }
+            &-color2 {
+                background:  $second-grad;
+            }
+            &-color3 {
+                background: $third-grad;
             }
         }
     }
@@ -35,5 +43,41 @@
 
     &:hover &-side--back {
         transform: rotateY(0);
+    }
+
+    //card content
+    &__img{
+        height: 100%;
+        // border-radius: .5rem;
+        position: relative;
+
+        &--1{
+         background:$main-grad ,url('../img/SPH_2551.jpg') no-repeat;
+        background-position: top;
+        background-size: cover;
+        }
+        &--2{
+            background:$second-grad ,url('../img/55560333_2264432760483267_417581399399202816_o.jpg') no-repeat;
+            background-position: top;
+        background-size: cover;
+        }
+        &--3{
+            background:$third-grad,url('../img/48402800_2201342623458948_7232344439606214656_o.jpg') no-repeat;
+            background-position: top;
+        background-size: cover;
+        }
+    }
+    &__heading{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & h2{
+            color: white;
+        }
     }
 }
