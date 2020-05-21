@@ -8,7 +8,7 @@
     &-side {
 
         height: 50vh;
-        transition: all 1s ease;
+        transition: transform 1s ease;
         position: absolute;
         width: 100%;
         top: 0;
@@ -19,10 +19,13 @@
 
         &--front {
             background-color: white;
+            backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
         }
 
         &--back {
-            transform: rotateY(180deg);
+            transform: rotateX(180deg);
+           
 
             &-color1 {
                 background: $main-grad;
@@ -38,11 +41,11 @@
 
 
     &:hover &-side--front {
-        transform: rotateY(-180deg);
+        transform: rotateX(-180deg);
     }
 
     &:hover &-side--back {
-        transform: rotateY(0);
+        transform: rotateX(0);
     }
 
     //card content
@@ -53,12 +56,15 @@
 
         &--1{
          background:$main-grad ,url('../img/SPH_2551.jpg') no-repeat;
+         
         background-position: top;
         background-size: cover;
+        
         }
         &--2{
             background:$second-grad ,url('../img/55560333_2264432760483267_417581399399202816_o.jpg') no-repeat;
             background-position: top;
+           //s background-blend-mode: overlay;//good thing to remember
         background-size: cover;
         }
         &--3{
@@ -79,5 +85,8 @@
         & h2{
             color: white;
         }
+    }
+    &-back-info{
+        padding: 2rem;
     }
 }

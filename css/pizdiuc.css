@@ -253,7 +253,7 @@ body {
 }
 .card-side {
   height: 50vh;
-  transition: all 1s ease;
+  transition: transform 1s ease;
   position: absolute;
   width: 100%;
   top: 0;
@@ -264,9 +264,11 @@ body {
 }
 .card-side--front {
   background-color: white;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .card-side--back {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 .card-side--back-color1 {
   background: linear-gradient(#c73c437a, #c5055e91);
@@ -278,10 +280,10 @@ body {
   background: linear-gradient(#0b75ff7a, #365a1459);
 }
 .card:hover .card-side--front {
-  transform: rotateY(-180deg);
+  transform: rotateX(-180deg);
 }
 .card:hover .card-side--back {
-  transform: rotateY(0);
+  transform: rotateX(0);
 }
 .card__img {
   height: 100%;
@@ -314,6 +316,9 @@ body {
 }
 .card__heading h2 {
   color: white;
+}
+.card-back-info {
+  padding: 2rem;
 }
 
 .centering-text {
