@@ -1,22 +1,24 @@
-.heading-secondary{
+.heading-secondary {
     position: relative;
     margin-bottom: $gutter-horisontal;
     text-transform: uppercase;
     font-weight: 700;
-    background: $main-grad;
     font-size: $h2sizes;
     letter-spacing: 2px;
     display: inline-block;
+    background: $main-grad;
+    background-position: top;
     -webkit-background-clip: text;
-     color: transparent;
-     transition: all .2s;
-        &:hover{
-            transform: skewX(-3deg) translateY(-.3rem);
-            text-shadow: -.6rem .6rem .2rem rgba(44, 44, 44, 0.37) ;
-        }
+    color: transparent;
+    transition: all .2s;
+
+    &:hover {
+        transform: skewX(-3deg) translateY(-.3rem);
+        text-shadow: -.6rem .6rem .2rem rgba(44, 44, 44, 0.37);
+    }
 }
 
-.theh3{
+.theh3 {
     font-size: $h3sizes;
     margin: 2rem 1rem;
     color: $gray-text;

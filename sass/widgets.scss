@@ -1,10 +1,49 @@
 //centering text
-.centering-text{text-align: center;}
+.centering-text {
+    text-align: center;
+}
 
 
-.composition{
+.composition {
+    position: relative;
 
     &_img {
-        width: 50%;
+        width: 45%;
+        transition: all .3s;
+        box-shadow: 0 0 4rem #303030;
+        outline-offset: 1rem;
+
+        &:hover {
+            z-index: 100;
+            top: 0;
+            transform: scale(1.2) translateY(-2rem);
+            outline: 2rem solid $gradient-color1;
+        }
     }
+
+
+
+    &_img1 {
+        position: absolute;
+        top: 4rem;
+        left: 0;
+    }
+
+    &_img2 {
+        position: absolute;
+        top: 0;
+        left: 30%;
+        z-index: 2;
+    }
+
+    &_img3 {
+        position: absolute;
+        top: 2rem;
+        left: 15%;
+    }
+
+    &:hover &_img:not(:hover) {
+        transform: scale(.8);
+    }
+
 }

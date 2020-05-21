@@ -1,9 +1,9 @@
 .row {
-  max-width: 90vw;
+  max-width: 80vw;
   margin: 0 auto;
 }
 .row:not(:last-child) {
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
 }
 .row::after {
   content: "";
@@ -37,11 +37,58 @@
 
 .section-about {
   background-color: #f7f7f7f7;
+  height: 100vh;
   padding: 10rem 0 0;
   margin-top: -5rem;
 }
 .section-about p {
   font-size: 1.5rem;
+}
+
+.features {
+  height: 100vh;
+  position: relative;
+  margin-top: -5rem;
+  overflow: hidden;
+  transform: skewY(-2deg);
+}
+.features-under {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/img/olea2.jpg") 0 30% no-repeat;
+  transform: scale(1.1);
+  filter: grayscale(50%) blur(0.8rem);
+  background-size: cover;
+}
+.features-top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#e2495163, #e4217c6b);
+  padding: 20rem 0;
+}
+.features-top > * {
+  transform: skewY(2deg);
+}
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 1rem 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+.feature-box__icon {
+  font-size: 5rem;
+  background: linear-gradient(#e2495163, #e4217c6b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.feature-box:hover {
+  transform: translateY(-0.5rem) scale(1.1);
+  box-shadow: 0 2px 2rem #00000055;
 }
 
 *,
@@ -92,8 +139,11 @@ body {
   top: 5%;
   right: 5%;
   font-size: 6rem;
-  color: white;
   animation: slidown 1s ease-in-out;
+}
+.header .over .fa,
+.header .over .fas {
+  color: white;
 }
 
 .btn,
@@ -177,8 +227,39 @@ body {
   text-align: center;
 }
 
+.composition {
+  position: relative;
+}
 .composition_img {
-  width: 50%;
+  width: 45%;
+  transition: all 0.3s;
+  box-shadow: 0 0 4rem #303030;
+  outline-offset: 1rem;
+}
+.composition_img:hover {
+  z-index: 100;
+  top: 0;
+  transform: scale(1.2) translateY(-2rem);
+  outline: 2rem solid #ff080863;
+}
+.composition_img1 {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+}
+.composition_img2 {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  z-index: 2;
+}
+.composition_img3 {
+  position: absolute;
+  top: 2rem;
+  left: 15%;
+}
+.composition:hover .composition_img:not(:hover) {
+  transform: scale(0.8);
 }
 
 .heading-secondary {
@@ -186,10 +267,11 @@ body {
   margin-bottom: 6rem;
   text-transform: uppercase;
   font-weight: 700;
-  background: linear-gradient(#c73c437a, #c5055e91);
   font-size: 2.8rem;
   letter-spacing: 2px;
   display: inline-block;
+  background: linear-gradient(#c73c437a, #c5055e91);
+  background-position: top;
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.2s;
