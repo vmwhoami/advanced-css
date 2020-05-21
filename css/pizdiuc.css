@@ -1,5 +1,5 @@
 .row {
-  max-width: 80vw;
+  max-width: 102.4rem;
   margin: 0 auto;
 }
 .row:not(:last-child) {
@@ -91,6 +91,13 @@
   box-shadow: 0 2px 2rem #00000055;
 }
 
+.backface-feature {
+  background-color: #f7f7f7f7;
+  height: 100vh;
+  padding: 10rem 0 0;
+  margin-top: -5rem;
+}
+
 *,
 *::before,
 *::after {
@@ -140,6 +147,20 @@ body {
   right: 5%;
   font-size: 6rem;
   animation: slidown 1s ease-in-out;
+}
+.header .over .logo-visible {
+  display: inline-block;
+}
+.header .over .logo-hidden {
+  display: none;
+}
+.header .over .logo:hover .logo-vizible {
+  display: none;
+}
+.header .over .logo:hover .logo-hidden {
+  display: inline-block;
+  transform: scale(1.2);
+  color: red;
 }
 .header .over .fa,
 .header .over .fas {
@@ -221,6 +242,38 @@ body {
 .btn-text:visited:active {
   transform: translateY(-0.2rem);
   box-shadow: -0.3rem 0.3rem 0.2rem rgba(44, 44, 44, 0.4);
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50vh;
+}
+.card-side {
+  height: 50vh;
+  transition: all 1s ease;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+.card-side--front {
+  background-color: white;
+}
+.card-side--back {
+  transform: rotateY(180deg);
+}
+.card-side--back-color {
+  background: linear-gradient(to right bottom, #ff4545, #3d0101);
+}
+.card:hover .card-side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card-side--back {
+  transform: rotateY(0);
 }
 
 .centering-text {

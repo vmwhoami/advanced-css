@@ -29,8 +29,25 @@
             top: 5%;
             right: 5%;
             font-size: 6rem;
-
             animation: slidown 1s ease-in-out;
+
+            &-visible {
+                display: inline-block;
+            }
+
+            &-hidden {
+                display: none;
+            }
+
+            &:hover .logo-vizible {
+                display: none;
+            }
+
+            &:hover .logo-hidden {
+                display: inline-block;
+                transform: scale(1.2);
+                color: red;
+            }
         }
 
         .fa,
