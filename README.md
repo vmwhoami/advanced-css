@@ -1,13 +1,13 @@
 # advanced-css
 
-# Advanced CSS course from Udemy
+# Advanced CSS course from Udemy side project
 
 
-> In this project, we made use of Grids, Flexbox and Positions and layout elements on the page correctly.
-
+> In this project I learned how to build your own bootstrap grid using floats
+> Learned how to use sass in this project scss 
 > Media queries were used to target different screen sizes in order for us to effectively and efficiently let the website fit correctly to each screen sizes.
 
-> Building this project was fun as we practiced different css rules and effectively combine grids, flex and position.
+> Building this project was fun as we practiced different css rules learned about new css tricks using pure css
 
 ![screenshot](#)
 
@@ -15,8 +15,8 @@
 This project covers the following HTML and CSS3 concepts
 
 - Fixed, relative and absolute positioning
-- Flex and Grid
 - Responsive Design concepts using media queries
+- Embeding images and videos
 
 ## Built With
 
