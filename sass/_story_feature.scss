@@ -1,0 +1,58 @@
+// this is the back of the card feature
+
+.story {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 90%;
+    padding: 1rem;
+
+    &_shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        -webkit-outside: circle(50% at 50% 50%); // this property gives rounded text effect
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        position: relative;
+
+        &_img-1 {
+            height: 100%;
+            transform: scale(1.8) translateX(-4rem);
+            transition: all .3s;
+        }
+
+
+        &_img-2 {
+            height: 100%;
+            transform: scale(2.5) translate(2rem, 2rem);
+            transition: all .3s;
+        }
+
+
+    }
+
+    &_caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: white;
+        font-size: 1.5rem;
+        // z-index: 10;
+        text-transform: uppercase;
+        transition: all .3s ease;
+        opacity: 0;
+    }
+
+    &:hover .story_shape_img-1,
+    &:hover .story_shape_img-2 {
+        transform: scale(1.5);
+        filter: blur(3px) brightness(70%);
+    }
+
+    &:hover &_caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+
+}

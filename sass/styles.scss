@@ -6,6 +6,8 @@
 @import 'header';
 @import '_btn';
 @import 'card';
+@import 'story_feature';
+@import 'video';
 @import 'widgets';
 @import 'typography';
 
@@ -17,7 +19,7 @@
     display: inline-block;
     color: white;
     font-size: 2rem;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;

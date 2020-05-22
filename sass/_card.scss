@@ -2,12 +2,12 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50vh;
-   
-//Card functionality
+    height: 55vh;
+
+    //Card functionality
     &-side {
 
-        height: 50vh;
+        height: 55vh;
         transition: transform 1s ease;
         position: absolute;
         width: 100%;
@@ -20,19 +20,23 @@
         &--front {
             background-color: white;
             backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
         }
+
+        //back of the card
 
         &--back {
             transform: rotateX(180deg);
-           
+
 
             &-color1 {
                 background: $main-grad;
             }
+
             &-color2 {
-                background:  $second-grad;
+                background: $second-grad;
             }
+
             &-color3 {
                 background: $third-grad;
             }
@@ -49,44 +53,96 @@
     }
 
     //card content
-    &__img{
+    &__img {
         height: 100%;
         // border-radius: .5rem;
         position: relative;
 
-        &--1{
-         background:$main-grad ,url('../img/SPH_2551.jpg') no-repeat;
-         
-        background-position: top;
-        background-size: cover;
-        
+        &--1 {
+            background: $main-grad, url('../img/SPH_2551.jpg') no-repeat;
+            background-position: 0 -10rem;
+            background-size: 100%;
+            clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+
         }
-        &--2{
-            background:$second-grad ,url('../img/55560333_2264432760483267_417581399399202816_o.jpg') no-repeat;
-            background-position: top;
-           //s background-blend-mode: overlay;//good thing to remember
-        background-size: cover;
+
+        &--2 {
+            background: $second-grad, url('../img/55560333_2264432760483267_417581399399202816_o.jpg') no-repeat;
+
+            background-size: 100%;
+            clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+
         }
-        &--3{
-            background:$third-grad,url('../img/48402800_2201342623458948_7232344439606214656_o.jpg') no-repeat;
-            background-position: top;
-        background-size: cover;
+
+        &--3 {
+            background: $third-grad, url('../img/48402800_2201342623458948_7232344439606214656_o.jpg') no-repeat;
+            background-position: 0 -2rem;
+            background-size: 100%;
+            clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+
         }
     }
-    &__heading{
+
+    &__heading {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 60%;
+        height: 50%;
         top: 0;
         left: 0;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        & h2{
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        &_h2 {
             color: white;
+            padding-right: 3rem;
+            font-size: 2.5rem;
         }
     }
-    &-back-info{
-        padding: 2rem;
+
+    &__heading_span {
+        -webkit-decoration-break: clone;
+        box-decoration-break: clone;
+        padding: 0 2rem;
+
+        &--1 {
+            background-image: $main-grad;
+        }
+
+        &--2 {
+            background-image: $second-grad;
+        }
+
+        &--3 {
+            background-image: $third-grad;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & ul {
+            list-style: none;
+            width: 80%;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+
+                &:not(:last-child) {
+                    padding: 1rem 2rem;
+                    border-bottom: 1px solid #eee;
+                }
+            }
+
+
+        }
+
     }
 }
