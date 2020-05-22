@@ -1,10 +1,9 @@
-# advanced-css
 # Advanced CSS course from Udemy side project
 
 
 > In this project, I learned how to build your own bootstrap grid using floats
-> Learned how to use sass in this project  
-> Media queries were used to target "different” screen sizes in order for us to effectively and efficiently let the website fit correctly to each screen size.
+> Learned how to use sass in this project  
+> Media queries were used to target “different” screen sizes in order for us to effectively and efficiently let the website fit correctly to each screen size.
 
 > Building this project was fun as we practiced different CSS rules learned about new CSS tricks using pure CSS
 
