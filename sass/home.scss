@@ -17,6 +17,7 @@
     margin-top: -5rem;
     overflow: hidden;
     transform: skewY(-2deg);
+    box-sizing: unset;
 
     &-under {
         position: absolute;

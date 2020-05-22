@@ -1,4 +1,21 @@
 .video-background {
-    background-color: $color-grey-light1;
+    // background-color: $color-grey-light1;
     height: 100vh;
+    position: relative;
+}
+.video-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+       height: 100%;
+    
+    &__content{
+        width: 100%;
+       height: 100%;
+        object-fit: cover;
+        opacity: .7;
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        filter: grayscale(.7) blur(5px);
+    }
 }
