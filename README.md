@@ -9,7 +9,7 @@
 
 > Building this project was fun as we practiced different css rules learned about new css tricks using pure css
 
-![screenshot](#)
+![screenshot](https://raw.githubusercontent.com/vmwhoami/advanced-css/work-home/img/Screenshot_1.jpg)
 
 
 This project covers the following HTML and CSS3 concepts
