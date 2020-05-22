@@ -27,7 +27,7 @@ This project covers the following HTML and CSS3 concepts
 
 ## Live Demo
 
-[Live Demo Link](#)
+[Live Demo Link](https://gracious-lovelace-f8f389.netlify.app/)
 
 ## Getting Started
 
