@@ -95,7 +95,7 @@
 
 .backface-feature {
   background-color: #f7f7f7f7;
-  height: 100vh;
+  height: 120vh;
   padding: 10rem 0 0;
   margin-top: -5rem;
 }
@@ -403,6 +403,7 @@ body {
 }
 
 .video-background {
+  margin-top: -10rem;
   height: 100vh;
   position: relative;
 }
