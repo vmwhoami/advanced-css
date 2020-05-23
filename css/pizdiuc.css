@@ -406,6 +406,8 @@ body {
   margin-top: -10rem;
   height: 100vh;
   position: relative;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  z-index: 2;
 }
 
 .video-bg {
@@ -414,18 +416,33 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 .video-bg__content {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.7;
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-  filter: grayscale(0.7) blur(5px);
+  opacity: 0.6;
+  -moz-filter: grayscale(0.2) blur(3px);
+  filter: grayscale(0.2) blur(3px);
+}
+
+.video-form {
+  background: #020024;
+  background: linear-gradient(95deg, #020024 0%, rgba(255, 255, 255, 0.7035189076) 0%, rgba(255, 255, 255, 0.7035189076) 44%, rgba(0, 0, 0, 0) 44%, rgba(0, 0, 0, 0) 100%), url("../img/adam.jpg") top;
+  box-shadow: 0 1rem 4rem #00000021;
+  height: 60%;
+  width: 80%;
+  z-index: 100;
+  margin: 0 auto;
 }
 
 .centering-text {
   text-align: center;
+}
+
+.margin-top {
+  margin-top: 4rem;
 }
 
 .flex-center {
