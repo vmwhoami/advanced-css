@@ -1,0 +1,16 @@
+.form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 40rem;
+    margin: 2rem;
+}
+
+.input-form__input:not(:last-child){
+    margin-bottom: 3rem;
+}
+
+.input-form__text:focus,
+.input-form__email:focus{
+    outline: none;
+}
