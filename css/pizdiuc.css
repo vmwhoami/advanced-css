@@ -451,15 +451,36 @@ body {
 }
 
 .input-form__input {
-  background-color: transparent;
-  padding: 1rem;
+  background-color: #ffffff20;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
   border: none;
-  box-shadow: 0 0.5rem 2rem #00000050;
+  box-shadow: 0 2rem 1rem #00000020;
+  font-family: inherit;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+}
+.input-form__input::-webkit-input-placeholder {
+  color: #999;
 }
 .input-form__input:focus {
   outline: none;
-  border: none;
-  box-shadow: 0 0.5rem 2rem #00000050;
+  background-color: #ffffff90;
+  border-bottom: 3px solid greenyellow;
+  box-shadow: 0 0.5rem 2rem #00000060;
+}
+.input-form__input:focus:invalid {
+  border-bottom: 3px solid #8a0000;
+}
+
+.input-form__label {
+  font-size: 1.5rem;
+  color: #999;
+  font-weight: 800;
+  margin-left: 2rem;
+  padding-top: 0.6rem;
+  display: block;
 }
 
 .centering-text {
