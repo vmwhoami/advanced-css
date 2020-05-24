@@ -22,8 +22,7 @@
     width: 90%;
     display: block;
     
-    
- 
+
 
     &::-webkit-input-placeholder{
         color: #999;
@@ -41,11 +40,18 @@
 
 }
 
+.input-form__input:placeholder-shown + .input-form__label{
+opacity: 0;
+   visibility: hidden;
+   transform: translateY(-3rem);
+}
+
 .input-form__label{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #999;
-    font-weight: 800;
+    font-weight: 600;
     margin-left: 2rem;
     padding-top: .6rem;
     display: block;
+    transition: all .3s;
 }
