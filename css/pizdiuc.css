@@ -446,13 +446,20 @@ body {
   margin: 2rem;
 }
 
-.input-form__input:not(:last-child) {
+.input-form__container:not(:last-child) {
   margin-bottom: 3rem;
 }
 
-.input-form__text:focus,
-.input-form__email:focus {
+.input-form__input {
+  background-color: transparent;
+  padding: 1rem;
+  border: none;
+  box-shadow: 0 0.5rem 2rem #00000050;
+}
+.input-form__input:focus {
   outline: none;
+  border: none;
+  box-shadow: 0 0.5rem 2rem #00000050;
 }
 
 .centering-text {
