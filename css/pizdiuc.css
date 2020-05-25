@@ -506,12 +506,29 @@ body {
   border: 0.5rem solid #e4217c6b;
   border-radius: 50%;
   display: block;
+  position: relative;
 }
 .form-radio-button::after {
   content: "";
+  display: block;
   height: 1rem;
   width: 1rem;
   background-color: #e4217c6b;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.form-radio-input:checked ~ .form-radio-label .form-radio-button::after {
+  opacity: 1;
+}
+
+.form-radio-input {
+  display: none;
 }
 
 .centering-text {
