@@ -446,10 +446,6 @@ body {
   margin: 2rem;
 }
 
-.input-form__container:not(:last-child) {
-  margin-bottom: 3rem;
-}
-
 .input-form__input {
   background-color: #ffffff20;
   padding: 1.5rem 2rem;
@@ -460,6 +456,7 @@ body {
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block;
+  transition: all 0.3s;
 }
 .input-form__input::-webkit-input-placeholder {
   color: #999;
@@ -488,6 +485,10 @@ body {
   padding-top: 0.6rem;
   display: block;
   transition: all 0.3s;
+}
+
+.radio-group {
+  display: inline;
 }
 
 .centering-text {
