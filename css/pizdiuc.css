@@ -246,6 +246,48 @@ body {
   box-shadow: -0.3rem 0.3rem 0.2rem rgba(44, 44, 44, 0.4);
 }
 
+.btn-form-submit,
+.btn-form-submit:focus {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 0 0.2rem #333333;
+  padding: 1rem 2rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  color: white;
+  background: linear-gradient(#c73c43a9, #c5055fab);
+  border-radius: 0.5rem;
+  transition: all 0.1s;
+}
+.btn-form-submit:active,
+.btn-form-submit:focus:active {
+  transform: scale(1.1);
+}
+.btn-form-submit:hover,
+.btn-form-submit:focus:hover {
+  transform: scale(1.2);
+}
+.btn-form-submit::after,
+.btn-form-submit:focus::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.5rem;
+  background: linear-gradient(#c73c43a9, #c5055fab);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.btn-form-submit:hover::after,
+.btn-form-submit:focus:hover::after {
+  background: linear-gradient(#c73c43a9, #c5055fab);
+  transform: scaleY(1.5) scaleX(1.8);
+  opacity: 0;
+}
+
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -580,7 +622,7 @@ body {
 
 .heading-secondary {
   position: relative;
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2.8rem;
