@@ -119,6 +119,10 @@ body {
   margin: 1rem 2rem;
 }
 
+.navigation {
+  display: none;
+}
+
 .header {
   background: linear-gradient(#c73c43a9, #c5055fab), url("../img/oleaA.jpg") 0 30% no-repeat;
   background-size: cover;
