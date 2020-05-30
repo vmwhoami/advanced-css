@@ -86,6 +86,7 @@
     background: $main-grad;
     border-radius: .5rem;
     transition: all .1s;
+    margin-top: $m-1;
     &:active{
         transform: scale(1.1);
     }

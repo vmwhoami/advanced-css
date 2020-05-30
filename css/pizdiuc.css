@@ -259,6 +259,7 @@ body {
   background: linear-gradient(#c73c43a9, #c5055fab);
   border-radius: 0.5rem;
   transition: all 0.1s;
+  margin-top: 1rem;
 }
 .btn-form-submit:active,
 .btn-form-submit:focus:active {
@@ -569,6 +570,19 @@ body {
 
 .form-radio-input {
   display: none;
+}
+
+.footer {
+  height: 50vh;
+  width: 100%;
+  background-color: #555;
+  position: relative;
+}
+.footer__logo {
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  top: 0;
 }
 
 .centering-text {
