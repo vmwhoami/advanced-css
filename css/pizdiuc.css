@@ -579,10 +579,13 @@ body {
   position: relative;
 }
 .footer__logo {
+  position: absolute;
   width: 5rem;
   height: 5rem;
   background-color: white;
-  top: 0;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .centering-text {
