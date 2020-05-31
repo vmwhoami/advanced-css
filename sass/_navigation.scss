@@ -1,3 +1,37 @@
 .navigation{
-    display: none;
+    &-checkbox{
+        display: none;
+    }
+    &-handle{
+        position: fixed;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        top: 6rem;
+        right: 6rem;
+        background-color: white;
+        z-index: 150;
+    }
+    &-background{
+        position: fixed;
+        width: 6rem;
+        height: 6rem;
+        top: 6.5rem;
+        right: 6.5rem;
+        background: radial-gradient($gradient-color2,$gradient-color1);
+        border-radius: 50%;
+        z-index: 100;
+    }
+    &-nav{
+
+    }
+    &-list{
+
+    }
+    &-item{
+
+    }
+    &-link{
+
+    }
 }

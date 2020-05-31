@@ -119,10 +119,29 @@ body {
   margin: 1rem 2rem;
 }
 
-.navigation {
+.navigation-checkbox {
   display: none;
 }
-
+.navigation-handle {
+  position: fixed;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  top: 6rem;
+  right: 6rem;
+  background-color: white;
+  z-index: 150;
+}
+.navigation-background {
+  position: fixed;
+  width: 6rem;
+  height: 6rem;
+  top: 6.5rem;
+  right: 6.5rem;
+  background: radial-gradient(#e4217c6b, #ff080863);
+  border-radius: 50%;
+  z-index: 100;
+}
 .header {
   background: linear-gradient(#c73c43a9, #c5055fab), url("../img/oleaA.jpg") 0 30% no-repeat;
   background-size: cover;
