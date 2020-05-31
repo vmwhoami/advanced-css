@@ -138,10 +138,33 @@ body {
   height: 6rem;
   top: 6.5rem;
   right: 6.5rem;
-  background: radial-gradient(#e4217c6b, #ff080863);
+  background: radial-gradient(#b80056, #830000);
   border-radius: 50%;
   z-index: 100;
+  transform: scale(50);
 }
+.navigation-nav {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+}
+.navigation-list {
+  position: absolute;
+  list-style: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navigation-link:link, .navigation-link:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  background: linear-gradient();
+}
+
 .header {
   background: linear-gradient(#c73c43a9, #c5055fab), url("../img/oleaA.jpg") 0 30% no-repeat;
   background-size: cover;
