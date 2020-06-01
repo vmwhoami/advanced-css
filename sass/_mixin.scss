@@ -5,3 +5,23 @@
         clear: both;
     }
 }
+
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//Media querry manager
+/*   
+0 - 600px Phone
+600px - 900px tablet portrait mode
+900px - 1200px  tablet in landscape
+1200px - up desktop
+*/
+@mixin respon-phone {
+    @media (max-width:600) {
+        @content
+    }
+}
