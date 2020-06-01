@@ -1,8 +1,9 @@
-.navigation{
-    &-checkbox{
+.navigation {
+    &-checkbox {
         display: none;
     }
-    &-handle{
+
+    &-handle {
         position: fixed;
         width: 7rem;
         height: 7rem;
@@ -10,9 +11,18 @@
         top: 6rem;
         right: 6rem;
         background-color: white;
-        z-index: 150;
+        z-index: 250;
+        box-shadow: 0 1rem 1rem #00000011;
+
+        span {
+            width: 1.5rem;
+            height: 2px;
+            background-color: $gray-text;
+        }
+
     }
-    &-background{
+
+    &-background {
         position: fixed;
         width: 6rem;
         height: 6rem;
@@ -21,46 +31,67 @@
         background: $radial-grad;
         border-radius: 50%;
         z-index: 100;
-        transform: scale(50);
+        transition: transform .8s cubic-bezier(.09, 1.15, .97, .98);
     }
-    &-nav{
+
+    &-nav {
         position: fixed;
-        width: 100%;
+        top: 0;
+        left: 0;
+
         height: 100vh;
         z-index: 200;
+
+        // display: none;
+        width: 0;
+        opacity: 0;
+        transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
-    &-list{
+
+    &-list {
         position: absolute;
         list-style: none;
-        top:50%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
-    &-item{
+
+    &-item {
         margin: 1rem;
     }
-    &-link{  
+
+    &-link {
+
         &:link,
         &:visited {
-        display: inline-block;
-        padding: .5rem 2rem;
-        text-decoration: none;
-        color: white;
-        font-size: 3rem;
-        font-weight: 300;
-        margin-top: 1rem;
-        background: linear-gradient(95deg,
-         rgba(255,255,255,0) 0%,
-          rgba(255,255,255,0) 50%, 
-          rgba(255,255,255,1) 50%, 
-          rgba(255,255,255,1) 100%);
-        background-size: 220%;
-        transition: all .3s;
+            display: inline-block;
+            padding: .5rem 2rem;
+            text-decoration: none;
+            color: white;
+            font-size: 3rem;
+            font-weight: 300;
+            margin-top: 1rem;
+            background-image: linear-gradient(120deg,
+                    transparent 0%,
+                    transparent 50%,
+                    #fff 50%);
+            background-size: 235%;
+            transition: background-position .4s ease;
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $gradient-color1;
+        }
     }
-    &:hover,
-    &:active{
-        background-size: 100%;
-        color: $gradient-color1;
+
+    &-checkbox:checked~&-background {
+        transform: scale(80);
     }
-   }
+
+    &-checkbox:checked~&-nav {
+        width: 100%;
+        opacity: 1;
+    }
 }
