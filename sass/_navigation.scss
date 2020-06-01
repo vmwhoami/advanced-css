@@ -13,14 +13,56 @@
         background-color: white;
         z-index: 250;
         box-shadow: 0 1rem 1rem #00000011;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
 
-        span {
-            width: 1.5rem;
+    // burger button
+
+    &-icon {
+        position: relative;
+
+
+        &,
+        &::before,
+        &::after {
+            width: 2.5rem;
             height: 2px;
-            background-color: $gray-text;
+            background-color: grey;
+            display: inline-block;
+            position: absolute;
+            transition: all .2s;
         }
 
+        &::before,
+        &::after {
+            content: "";
+            left: 0;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem
+        }
     }
+
+    &-handle:hover &-icon::before {
+        top: -1rem;
+        transition: all .2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    &-handle:hover &-icon::after {
+        top: 1rem;
+        transition: all .2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+
 
     &-background {
         position: fixed;
@@ -93,5 +135,19 @@
     &-checkbox:checked~&-nav {
         width: 100%;
         opacity: 1;
+    }
+
+    &-checkbox:checked+&-handle &-icon {
+        background-color: transparent;
+    }
+
+    &-checkbox:checked+&-handle &-icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &-checkbox:checked+&-handle &-icon::after {
+        top: 0;
+        transform: rotate(-135deg);
     }
 }

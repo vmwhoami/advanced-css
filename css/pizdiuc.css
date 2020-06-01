@@ -132,11 +132,40 @@ body {
   background-color: white;
   z-index: 250;
   box-shadow: 0 1rem 1rem #00000011;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-.navigation-handle span {
-  width: 1.5rem;
+.navigation-icon {
+  position: relative;
+}
+.navigation-icon, .navigation-icon::before, .navigation-icon::after {
+  width: 2.5rem;
   height: 2px;
-  background-color: #555;
+  background-color: grey;
+  display: inline-block;
+  position: absolute;
+  transition: all 0.2s;
+}
+.navigation-icon::before, .navigation-icon::after {
+  content: "";
+  left: 0;
+}
+.navigation-icon::before {
+  top: -0.8rem;
+}
+.navigation-icon::after {
+  top: 0.8rem;
+}
+.navigation-handle:hover .navigation-icon::before {
+  top: -1rem;
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.navigation-handle:hover .navigation-icon::after {
+  top: 1rem;
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .navigation-background {
   position: fixed;
@@ -192,6 +221,17 @@ body {
   width: 100%;
   opacity: 1;
 }
+.navigation-checkbox:checked + .navigation-handle .navigation-icon {
+  background-color: transparent;
+}
+.navigation-checkbox:checked + .navigation-handle .navigation-icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.navigation-checkbox:checked + .navigation-handle .navigation-icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
 
 .header {
   background: linear-gradient(#c73c43a9, #c5055fab), url("../img/oleaA.jpg") 0 30% no-repeat;
@@ -222,7 +262,7 @@ body {
   top: 5%;
   right: 5%;
   font-size: 6rem;
-  animation: slidown 1s ease-in-out;
+  animation: slidown 0.1s ease-in-out;
 }
 .header .over .logo-visible {
   display: inline-block;
@@ -647,19 +687,53 @@ body {
 }
 
 .footer {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   background-color: #555;
   position: relative;
+  margin-top: -20rem;
 }
 .footer__logo {
   position: absolute;
-  width: 5rem;
-  height: 5rem;
-  background-color: white;
-  top: 20%;
+  width: 10rem;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.footer__logo--svg {
+  fill: white;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 400;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-container {
+  width: 75%;
+  height: 70vh;
+  background-color: white;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.popup-img {
+  width: 35%;
+}
+.popup-img--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popup-content {
+  width: 65%;
+  padding: 4rem;
 }
 
 .centering-text {

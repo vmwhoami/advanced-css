@@ -1,0 +1,35 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 400;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container {
+        width: 75%;
+        height: 70vh;
+        background-color: white;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    &-img {
+        width: 35%;
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-content {
+        width: 65%;
+        padding: 4rem;
+    }
+}
