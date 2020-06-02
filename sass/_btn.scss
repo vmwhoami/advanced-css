@@ -17,6 +17,10 @@
     cursor: pointer;
     transition: all .5s;
     animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+    @include respond(phone) {
+        font-size: 1.2rem;
+    }
 }
 
 .btn:active {

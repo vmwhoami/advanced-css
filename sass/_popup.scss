@@ -43,6 +43,13 @@
         padding: 4rem;
     }
 
+    &-text {
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid gray;
+        hyphens: auto;
+        font-size: 1.4rem;
+    }
 
     &-close {
         position: absolute;
@@ -61,8 +68,5 @@
         &:hover {
             color: red;
         }
-
-
-
     }
 }

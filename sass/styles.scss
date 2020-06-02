@@ -39,6 +39,11 @@
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+    }
 }
 
 .loveyou {
@@ -46,6 +51,11 @@
     animation-name: slideright;
     animation-duration: 1s;
     animation-timing-function: ease-in;
+
+    @include respond(phone) {
+        font-size: 1rem;
+        letter-spacing: .2rem;
+    }
 }
 
 

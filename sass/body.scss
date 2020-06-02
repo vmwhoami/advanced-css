@@ -6,12 +6,25 @@
     box-sizing: inherit;
 }
 
+
+
 html {
     font-size: 62.5%;
 
-    @include respon-phone {
+    @include respond(tablet-land) {
+        font-size: 56.25%;
+    }
+
+
+    @include respond(tablet-port) {
         font-size: 50%;
     }
+
+
+    @include respond(comp) {
+        font-size: 75%;
+    }
+
 }
 
 body {
@@ -19,4 +32,9 @@ body {
     line-height: 1.7;
     font-family: 'Lato', sans-serif;
     margin: 1rem 2rem;
+
+    @include respond(tablet-port) {
+        margin: 0;
+    }
+
 }

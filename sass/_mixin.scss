@@ -14,14 +14,50 @@
 }
 
 //Media querry manager
-/*   
-0 - 600px Phone
-600px - 900px tablet portrait mode
-900px - 1200px  tablet in landscape
-1200px - up desktop
-*/
-@mixin respon-phone {
-    @media (max-width:600) {
-        @content
+// 1. Base & typography
+// 2. Header footer navigation
+// 3. General layout and the grid
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media (max-width:37.5em) {
+            //600px
+            @content
+        }
+
+        ;
     }
+
+
+
+    @if $breakpoint==tablet-port {
+        @media (max-width:56.25em) {
+            //900px
+            @content
+        }
+
+        ;
+    }
+
+
+    @if $breakpoint==tablet-land {
+        @media (max-width:75em) {
+            //1200px
+            @content
+        }
+
+        ;
+    }
+
+
+
+    @if $breakpoint==comp {
+        @media (min-width:112.5em) {
+            //
+            @content
+        }
+
+        ;
+    }
+
+
 }

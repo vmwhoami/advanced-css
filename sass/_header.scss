@@ -1,58 +1,58 @@
-.header {
-    background: $main-grad, url("../img/oleaA.jpg") 0 30% no-repeat;
-    background-size: cover;
-    height: 95vh;
-    clip-path: $main-head-cliping;
-    border-radius: .5rem;
-    position: relative;
+ .header {
+     background: $main-grad, url("../img/oleaA.jpg") 0 30% no-repeat;
+     background-size: cover;
+     height: 95vh;
+     clip-path: $main-head-cliping;
+     border-radius: .5rem;
+     position: relative;
 
-    .under {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url("../img/oleaA.jpg") 0 30% no-repeat;
-        filter: grayscale(50%) blur(.8rem);
-        clip-path: $main-head-cliping;
-        background-size: cover;
-    }
+     .under {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         background: url("../img/oleaA.jpg") 0 30% no-repeat;
+         filter: grayscale(50%) blur(.8rem);
+         clip-path: $main-head-cliping;
+         background-size: cover;
+     }
 
-    .over {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#e2495163, #e4217c6b);
-        clip-path: $main-head-cliping;
+     .over {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(#e2495163, #e4217c6b);
+         clip-path: $main-head-cliping;
 
 
-        .logo {
-            position: absolute;
-            top: 5%;
-            right: 5%;
-            font-size: 6rem;
-            animation: slidown .1s ease-in-out;
+         .logo {
+             position: absolute;
+             top: 5%;
+             right: 5%;
+             font-size: 6rem;
+             animation: slidown .1s ease-in-out;
 
-            &-visible {
-                display: inline-block;
-            }
+             &-visible {
+                 display: inline-block;
+             }
 
-            &-hidden {
-                display: none;
-            }
+             &-hidden {
+                 display: none;
+             }
 
-            &:hover .logo-vizible {
-                display: none;
-            }
+             &:hover .logo-vizible {
+                 display: none;
+             }
 
-            &:hover .logo-hidden {
-                display: inline-block;
-                transform: scale(1.2);
-                color: red;
-            }
-        }
+             &:hover .logo-hidden {
+                 display: inline-block;
+                 transform: scale(1.2);
+                 color: red;
+             }
+         }
 
-        .fa,
-        .fas {
-            color: rgb(255, 255, 255);
-        }
-    }
-}
+         .fa,
+         .fas {
+             color: rgb(255, 255, 255);
+         }
+     }
+ }

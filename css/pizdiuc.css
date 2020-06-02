@@ -1,9 +1,3 @@
-/*   
-0 - 600px Phone
-600px - 900px tablet portrait mode
-900px - 1200px  tablet in landscape
-1200px - up desktop
-*/
 *,
 *::before,
 *::after {
@@ -15,9 +9,19 @@
 html {
   font-size: 62.5%;
 }
-@media (max-width: 600) {
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
   html {
     font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
   }
 }
 
@@ -27,13 +31,29 @@ body {
   font-family: "Lato", sans-serif;
   margin: 1rem 2rem;
 }
+@media (max-width: 56.25em) {
+  body {
+    margin: 0;
+  }
+}
 
 .row {
   max-width: 102.4rem;
   margin: 0 auto;
 }
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+  }
+}
 .row:not(:last-child) {
   margin-bottom: 10rem;
+}
+@media (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 6rem;
+    padding: 0 2rem;
+  }
 }
 .row::after {
   content: "";
@@ -45,6 +65,17 @@ body {
 }
 .row [class^=col-]:not(:last-child) {
   margin-right: 6rem;
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-] {
+    width: 100% !important;
+  }
 }
 .row .col-1-of-2 {
   width: calc((100% - 6rem) /2);
@@ -313,6 +344,12 @@ body {
   cursor: pointer;
   transition: all 0.5s;
   animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+@media (max-width: 37.5em) {
+  .btn,
+.btn:focus {
+    font-size: 1.2rem;
+  }
 }
 
 .btn:active {
@@ -763,6 +800,13 @@ body {
   width: 65%;
   padding: 4rem;
 }
+.popup-text {
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 1px solid gray;
+  hyphens: auto;
+  font-size: 1.4rem;
+}
 .popup-close {
   position: absolute;
   display: inline-block;
@@ -842,6 +886,16 @@ body {
   color: transparent;
   transition: all 0.2s;
 }
+@media (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 1.2rem;
+  }
+}
 .heading-secondary:hover {
   transform: skewX(-3deg) translateY(-0.3rem);
   text-shadow: -0.6rem 0.6rem 0.2rem rgba(44, 44, 44, 0.37);
@@ -851,6 +905,16 @@ body {
   font-size: 2rem;
   margin: 2rem 1rem;
   color: #555;
+}
+@media (max-width: 56.25em) {
+  .theh3 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .theh3 {
+    font-size: 1.2rem;
+  }
 }
 
 .title {
@@ -872,12 +936,24 @@ body {
   animation-timing-function: ease-in-out;
   backface-visibility: hidden;
 }
+@media (max-width: 37.5em) {
+  .title h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+  }
+}
 
 .loveyou {
   font-size: 1.5rem;
   animation-name: slideright;
   animation-duration: 1s;
   animation-timing-function: ease-in;
+}
+@media (max-width: 37.5em) {
+  .loveyou {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
 }
 
 .moveUp {

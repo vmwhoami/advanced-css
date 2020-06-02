@@ -13,6 +13,14 @@
     color: transparent;
     transition: all .2s;
 
+    @include respond(tablet-port) {
+        font-size: 1.5rem
+    }
+
+    @include respond(phone) {
+        font-size: 1.2rem
+    }
+
     &:hover {
         transform: skewX(-3deg) translateY(-.3rem);
         text-shadow: -.6rem .6rem .2rem rgba(44, 44, 44, 0.37);
@@ -23,4 +31,12 @@
     font-size: $h3sizes;
     margin: 2rem 1rem;
     color: $gray-text;
+
+    @include respond(tablet-port) {
+        font-size: 1.5rem
+    }
+
+    @include respond(phone) {
+        font-size: 1.2rem
+    }
 }
