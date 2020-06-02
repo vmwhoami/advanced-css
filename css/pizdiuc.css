@@ -118,7 +118,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .section-about {
-    height: 110vh;
+    height: 130vh;
   }
 }
 
@@ -132,7 +132,12 @@ body {
 }
 @media (max-width: 56.25em) {
   .features {
-    height: 160vh;
+    height: 170vh;
+  }
+}
+@media (max-width: 37.5em) {
+  .features {
+    height: 200vh;
   }
 }
 .features-under {
@@ -158,7 +163,7 @@ body {
 }
 @media (max-width: 75em) {
   .features-top {
-    padding: 20rem 2rem;
+    padding: 20rem 0;
   }
 }
 .features-top > * {

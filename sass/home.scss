@@ -13,7 +13,7 @@
     }
 
     @include respond(phone) {
-        height: 110vh;
+        height: 130vh;
     }
 }
 
@@ -28,7 +28,11 @@
     box-sizing: unset;
 
     @include respond(tablet-port) {
-        height: 160vh;
+        height: 170vh;
+    }
+
+    @include respond(phone) {
+        height: 200vh;
     }
 
 
@@ -54,7 +58,7 @@
         }
 
         @include respond(tablet-land) {
-            padding: 20rem 2rem;
+            padding: 20rem 0;
         }
 
         &>* {
