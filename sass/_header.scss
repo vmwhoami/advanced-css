@@ -6,6 +6,10 @@
      border-radius: .5rem;
      position: relative;
 
+     @include respond(tablet-port) {
+         height: 50vh;
+     }
+
      .under {
          position: absolute;
          width: 100%;
