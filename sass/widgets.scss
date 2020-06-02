@@ -2,7 +2,8 @@
 .centering-text {
     text-align: center;
 }
-.margin-top{
+
+.margin-top {
     margin-top: 4rem;
 }
 
@@ -14,12 +15,21 @@
 
 .composition {
     position: relative;
+    // margin-left: 20rem;
+
+    @include respond(tablet-port) {
+        width: 90%;
+    }
 
     &_img {
         width: 45%;
         transition: all .3s;
         box-shadow: 0 0 4rem #303030;
         outline-offset: 1rem;
+
+        @include respond(tablet-port) {
+            width: 70%;
+        }
 
         &:hover {
             z-index: 100;
@@ -35,6 +45,11 @@
         position: absolute;
         top: 4rem;
         left: 0;
+
+        @include respond(tablet-port) {
+            top: 0;
+            left: 0;
+        }
     }
 
     &_img2 {
@@ -42,13 +57,26 @@
         top: 0;
         left: 30%;
         z-index: 2;
+
+        @include respond(tablet-port) {
+            left: 22%;
+            top: 20rem;
+            z-index: 2;
+        }
     }
 
     &_img3 {
         position: absolute;
         top: 2rem;
         left: 15%;
+
+        @include respond(tablet-port) {
+            top: 0;
+            left: 45%;
+        }
     }
+
+
 
     &:hover &_img:not(:hover) {
         transform: scale(.8);

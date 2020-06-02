@@ -3,7 +3,7 @@
    margin: 0 auto;
 
    @include respond(tablet-port) {
-      max-width: 50rem;
+      max-width: 85%;
    }
 
    &:not(:last-child) {
@@ -12,6 +12,11 @@
       @include respond(tablet-port) {
          margin-bottom: $gutter-vertical-small;
          padding: 0 2rem;
+      }
+
+      @include respond(tablet-land) {
+         margin-bottom: $gutter-vertical-small;
+         padding: 1rem 2rem;
       }
    }
 

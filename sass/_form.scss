@@ -4,7 +4,14 @@
     left: 0;
     max-width: 40rem;
     margin: 2rem;
+
+    @include respond(tablet-port) {
+        width: 70rem;
+    }
 }
+
+
+
 
 // .input-form__container:not(:last-child){
 //     margin-bottom: 0;

@@ -80,6 +80,10 @@
         top: 2rem;
         right: 2rem;
 
+        @include respond(tablet-port) {
+            color: white;
+        }
+
         &:link,
         &:visited {
             text-decoration: none;

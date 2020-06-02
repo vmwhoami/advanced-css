@@ -7,6 +7,14 @@
     p {
         font-size: $psizes;
     }
+
+    @include respond(tablet-port) {
+        height: 140vh;
+    }
+
+    @include respond(phone) {
+        height: 110vh;
+    }
 }
 
 
@@ -22,6 +30,7 @@
     @include respond(tablet-port) {
         height: 160vh;
     }
+
 
     &-under {
         position: absolute;
@@ -42,6 +51,10 @@
 
         @include respond(tablet-port) {
             padding: 5rem 0;
+        }
+
+        @include respond(tablet-land) {
+            padding: 20rem 2rem;
         }
 
         &>* {
@@ -81,4 +94,12 @@
     height: 120vh;
     padding: 10rem 0 0;
     margin-top: -5rem;
+
+    @include respond(tablet-port) {
+        height: 220vh;
+    }
+
+    @include respond(phone) {
+        height: 210vh;
+    }
 }
