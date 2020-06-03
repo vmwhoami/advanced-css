@@ -1,5 +1,5 @@
  .header {
-     background: $main-grad, url("../img/oleaA.jpg") 0 30% no-repeat;
+     background: $main-grad, url("../img/oleaA-1.jpg") 0 30% no-repeat;
      background-size: cover;
      height: 95vh;
      clip-path: $main-head-cliping;
@@ -9,6 +9,16 @@
      @include respond(tablet-port) {
          height: 50vh;
      }
+
+     @media(min-resolution:192dpi) and (min-width:600px) {
+         background: linear-gradient(to right, rgba(108, 189, 3, 0.514), rgba(192, 98, 9, 0.356)), url("../img/oleaA.jpg-1") 0 30% no-repeat;
+     }
+
+     @media(min-width:1200px) {
+         background: linear-gradient(to right, rgba(108, 189, 3, 0.514), rgba(192, 98, 9, 0.356)),
+             url("../img/oleaA.jpg") 0 30% no-repeat;
+     }
+
 
      .under {
          position: absolute;

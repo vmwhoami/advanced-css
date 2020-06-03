@@ -64,6 +64,10 @@
             background-size: 100%;
             clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 
+            @media(min-width:600px) {
+                background: $main-grad, url('../img/SPH_2551-1.jpg') no-repeat;
+            }
+
         }
 
         &--2 {
@@ -72,6 +76,9 @@
             background-size: 100%;
             clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 
+            @media(min-resolution:192dpi) and (min-width:600px) {
+                background: $second-grad, url('../img/55560333_2264432760483267_417581399399202816_o-1.jpg') no-repeat;
+            }
         }
 
         &--3 {
@@ -80,6 +87,9 @@
             background-size: 100%;
             clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 
+            @media (min-width:600px) {
+                background: $third-grad, url('../img/48402800_2201342623458948_7232344439606214656_o-1.jpg') no-repeat;
+            }
         }
     }
 

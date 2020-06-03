@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/vmlogo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/icons.css">
-    <link rel="stylesheet" href="css/pizdiuc.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/40ad9e98a9.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
@@ -31,7 +32,7 @@
                     <li class="navigation-item"><a href="#" class="navigation-link"> About </a></li>
                     <li class="navigation-item"><a href="#" class="navigation-link"> Who are we</a></li>
                     <li class="navigation-item"><a href="#" class="navigation-link"> Who are you</a></li>
-                    <li class="navigation-item"><a href="#form" class="navigation-link"> are we who are you ?</a>
+                    <li class="navigation-item"><a href="#form" class="navigation-link"> are we who are you?</a>
                     </li>
                     <li class="navigation-item"><a href="#" class="navigation-link"> Who who who?</a></li>
 
@@ -78,11 +79,19 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/adam.jpg" alt="Adam" class="composition_img composition_img1">
-                            <img src="img/48402800_2201342623458948_7232344439606214656_o.jpg" alt="Adam"
-                                class="composition_img composition_img2">
-                            <img src="img/39089010_2126752534251291_4189254548684013568_o.jpg" alt="Adam"
-                                class="composition_img composition_img3">
+                            <img srcset=" img/adam-1.jpg 509w,img/adam.jpg 1200w"
+                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam"
+                                class="composition_img composition_img1" src="img/adam-1.jpg">
+
+                            <img srcset=" img/48402800_2201342623458948_7232344439606214656_o-1.jpg 509w,img/48402800_2201342623458948_7232344439606214656_o.jpg 1200w"
+                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam"
+                                class="composition_img composition_img2"
+                                src="img/48402800_2201342623458948_7232344439606214656_o-1.jpg">
+
+                            <img srcset="img/39089010_2126752534251291_4189254548684013568_o-1.jpg 509w,img/39089010_2126752534251291_4189254548684013568_o.jpg 1200w"
+                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam"
+                                class="composition_img composition_img3"
+                                src="img/39089010_2126752534251291_4189254548684013568_o-1.jpg">
                         </div>
                     </div>
                 </div>
@@ -169,6 +178,7 @@
                             <div class="card-side card-side--back card-side--back-color1 flex-center ">
                                 <div class="story">
                                     <figure class="story_shape">
+
                                         <img class="story_shape_img-1" src="img/oleafahsion.jpg" alt="adams_img">
                                         <figcaption class="story_caption ">Olga Pirvu</figcaption>
                                     </figure>
@@ -319,7 +329,9 @@
         <div class="popup" id="popup">
             <div class="popup-container">
                 <div class="popup-img">
-                    <img class="popup-img--img" src='img/SPH_2551.jpg' alt="olea">
+                    <img srcset="img/SPH_2551-1.jpg 509w,img/SPH_2551.jpg 1200w"
+                        sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam" class="popup-img--img"
+                        alt="olea" src='img/SPH_2551-1.jpg'>
 
                 </div>
                 <div class="popup-content">
