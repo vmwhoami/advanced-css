@@ -149,7 +149,7 @@ body {
   filter: grayscale(50%) blur(0.8rem);
   background-size: cover;
 }
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .features-under {
     background: url("../img/olea2-1.jpg") 0 30% no-repeat;
   }
@@ -342,6 +342,7 @@ body {
   background: linear-gradient(#c73c43a9, #c5055fab), url("../img/oleaA-1.jpg") 0 30% no-repeat;
   background-size: cover;
   height: 95vh;
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
   border-radius: 0.5rem;
   position: relative;
@@ -367,6 +368,7 @@ body {
   height: 100%;
   background: url("../img/oleaA.jpg") 0 30% no-repeat;
   filter: grayscale(50%) blur(0.8rem);
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
   background-size: cover;
 }
@@ -375,6 +377,7 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(#e2495163, #e4217c6b);
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
   clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
 }
 .header .over .logo {
@@ -551,14 +554,14 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 }
 .card-side--front {
   background-color: white;
-  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .card-side--back {
   transform: rotateX(180deg);
@@ -586,9 +589,10 @@ body {
   background: linear-gradient(#c73c43a9, #c5055fab), url("../img/SPH_2551.jpg") no-repeat;
   background-position: 0 -10rem;
   background-size: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
   clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 }
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .card__img--1 {
     background: linear-gradient(#c73c43a9, #c5055fab), url("../img/SPH_2551-1.jpg") no-repeat;
   }
@@ -596,9 +600,10 @@ body {
 .card__img--2 {
   background: linear-gradient(#ff580b9a, #9c6c04a8), url("../img/55560333_2264432760483267_417581399399202816_o.jpg") no-repeat;
   background-size: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
   clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 }
-@media (min-resolution: 192dpi) and (min-width: 600px) {
+@media (max-width: 600px) {
   .card__img--2 {
     background: linear-gradient(#ff580b9a, #9c6c04a8), url("../img/55560333_2264432760483267_417581399399202816_o-1.jpg") no-repeat;
   }
@@ -607,9 +612,10 @@ body {
   background: linear-gradient(#0b75ff7a, #365a1459), url("../img/48402800_2201342623458948_7232344439606214656_o.jpg") no-repeat;
   background-position: 0 -2rem;
   background-size: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
   clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 }
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .card__img--3 {
     background: linear-gradient(#0b75ff7a, #365a1459), url("../img/48402800_2201342623458948_7232344439606214656_o-1.jpg") no-repeat;
   }
@@ -903,7 +909,16 @@ body {
   align-items: center;
   opacity: 0;
   visibility: hidden;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   transition: all 0.3s;
+}
+@supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
+  .popup {
+    -webkit-backdrop-filter: blur(5px) grayscale(1);
+    backdrop-filter: blur(5px) grayscale(1);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 .popup:target {
   opacity: 1;
@@ -1122,6 +1137,7 @@ body {
   animation-name: slideleft;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 @media (max-width: 37.5em) {

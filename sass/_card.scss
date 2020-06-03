@@ -13,14 +13,15 @@
         width: 100%;
         top: 0;
         left: 0;
-        backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 
         &--front {
             background-color: white;
-            backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
         }
 
         //back of the card
@@ -62,21 +63,22 @@
             background: $main-grad, url('../img/SPH_2551.jpg') no-repeat;
             background-position: 0 -10rem;
             background-size: 100%;
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
             clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 
-            @media(min-width:600px) {
+            @media(max-width:600px) {
                 background: $main-grad, url('../img/SPH_2551-1.jpg') no-repeat;
             }
-
         }
 
         &--2 {
             background: $second-grad, url('../img/55560333_2264432760483267_417581399399202816_o.jpg') no-repeat;
 
             background-size: 100%;
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
             clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 
-            @media(min-resolution:192dpi) and (min-width:600px) {
+            @media(max-width:600px) {
                 background: $second-grad, url('../img/55560333_2264432760483267_417581399399202816_o-1.jpg') no-repeat;
             }
         }
@@ -85,11 +87,13 @@
             background: $third-grad, url('../img/48402800_2201342623458948_7232344439606214656_o.jpg') no-repeat;
             background-position: 0 -2rem;
             background-size: 100%;
+            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
             clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 
-            @media (min-width:600px) {
+            @media (max-width:600px) {
                 background: $third-grad, url('../img/48402800_2201342623458948_7232344439606214656_o-1.jpg') no-repeat;
             }
+
         }
     }
 

@@ -11,7 +11,16 @@
     align-items: center;
     opacity: 0;
     visibility: hidden;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     transition: all .3s;
+
+    @supports(-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
+        -webkit-backdrop-filter: blur(5px) grayscale(1);
+        backdrop-filter: blur(5px) grayscale(1);
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
 
     &:target {
         opacity: 1;

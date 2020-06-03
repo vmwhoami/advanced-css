@@ -38,6 +38,7 @@
     animation-name: slideleft;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
     @include respond(phone) {
