@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/styles.scss css/styles.comp.css",
+    "concat:css": "concat -o css/styles.concat.css css/icons.css css/styles.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 5 versions' css/styles.concat.css -o css/styles.prefix.css"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,12 @@
   },
   "homepage": "https://github.com/vmwhoami/advanced-css#readme",
   "devDependencies": {
+    "concat": "^1.0.3",
+    "postcss-cli": "^7.1.1",
     "stylelint": "^13.5.0",
     "stylelint-config-recommended": "^3.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.0"
   }
 }
