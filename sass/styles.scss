@@ -1,0 +1,70 @@
+@import 'variables';
+@import 'mixin';
+@import "body";
+@import 'floats_grid';
+@import 'home';
+@import 'navigation';
+@import 'header';
+@import '_btn';
+@import 'card';
+@import 'story_feature';
+@import 'video';
+@import 'form';
+@import 'footer';
+@import 'popup';
+@import 'widgets';
+@import 'typography';
+
+
+
+
+.title {
+    position: absolute;
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: 1.5rem;
+    text-align: center;
+
+}
+
+
+
+.title h1 {
+    animation-name: slideleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    @include respond(phone) {
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+    }
+}
+
+.loveyou {
+    font-size: 1.5rem;
+    animation-name: slideright;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+
+    @include respond(phone) {
+        font-size: 1rem;
+        letter-spacing: .2rem;
+    }
+}
+
+
+.moveUp {
+    animation: moveUp .8s ease-out .4s;
+    animation-fill-mode: backwards;
+}
+
+/*     animations     */
+
+@import 'animations';

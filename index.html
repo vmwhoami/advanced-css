@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/vmlogo.svg" type="image/x-icon">
+   <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(66767047, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/66767047" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <link rel="stylesheet" href="css/styles.concat.css">
+    <script src=" https://kit.fontawesome.com/40ad9e98a9.js" crossorigin="anonymous">
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Advanced Css</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="navigation logo">
+            <input type="checkbox" name="nav" id="nav" class="navigation-checkbox">
+            <label for="nav" class="navigation-handle">
+                <span class="navigation-icon">&nbsp;</span>
+
+                <!-- <span class="fas fa-heart-broken logo-vizible ">&nbsp;</span>
+                <span class="fas fa-heart logo-hidden "></span> -->
+            </label>
+            <div class="navigation-background">&nbsp;</div>
+            <div class="navigation-nav">
+                <ul class="navigation-list">
+                    <li class="navigation-item"><a href="#" class="navigation-link"> About </a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link"> Who are we</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link"> Who are you</a></li>
+                    <li class="navigation-item"><a href="#form" class="navigation-link"> are we who are you?</a>
+                    </li>
+                    <li class="navigation-item"><a href="#" class="navigation-link"> Who who who?</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <header class="header">
+            <div class="under"></div>
+            <div class="over">
+                <!-- <div class="logo">
+                    <a href="">
+                        <span class="fas fa-heart-broken logo-vizible "></span>
+                        <span class="fas fa-heart logo-hidden "></span>
+                    </a>
+                </div> -->
+                <div class="title">
+                    <h1>The best <span>wife</span> </h1>
+                    <h2 class="loveyou">Love you very much</h2>
+                    <a class="btn moveUp" href="#">press me! </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="section-about">
+                <div class="centering-text">
+                    <h2 class="heading-secondary">
+                        meet my family
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="theh3">You are going to fall in love with her</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sed repellendus sapiente
+                            consequatur iure assumenda natus ea nesciunt cum. Ipsam eius tempore est impedit ipsa
+                            perferendis eos officiis ad quam.</p>
+                        <h3 class="theh3">Cupiditate culpa </h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis eius voluptas, necessitatibus
+                            fugit cupiditate culpa doloremque exercitationem minus.
+                        </p>
+                        <a href="" class="btn-text">Learn more &rarr;</a>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="composition">
+                            <img srcset=" img/adam-1.jpg 509w,img/adam.jpg 1200w"
+                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam"
+                                class="composition_img composition_img1" src="img/adam-1.jpg">
+
+                            <img srcset=" img/48402800_2201342623458948_7232344439606214656_o-1.jpg 509w,img/48402800_2201342623458948_7232344439606214656_o.jpg 1200w"
+                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam"
+                                class="composition_img composition_img2"
+                                src="img/48402800_2201342623458948_7232344439606214656_o-1.jpg">
+
+                            <img srcset="img/39089010_2126752534251291_4189254548684013568_o-1.jpg 509w,img/39089010_2126752534251291_4189254548684013568_o.jpg 1200w"
+                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam"
+                                class="composition_img composition_img3"
+                                src="img/39089010_2126752534251291_4189254548684013568_o-1.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="features-under"></div>
+                <div class="features-top">
+                    <div class="row">
+                        <div class="col-1-of-4">
+                            <div class="feature-box">
+                                <i class="feature-box__icon icon-basic-spades"></i>
+                                <h3 class="theh3">Love</h3>
+                                <p class="feature-box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Tempora in ipsa dolores ad pariatur debitis perspiciatis. Eius sequi tempora
+                                    laudantium, vel molestiae nemo dolores assumenda, magni eaque blanditiis earum
+                                    reprehenderit.</p>
+                            </div>
+                        </div>
+                        <div class="col-1-of-4">
+                            <div class="feature-box">
+                                <i class="feature-box__icon icon-basic-watch"></i>
+                                <h3 class="theh3">Time</h3>
+                                <p class="feature-box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Tempora in ipsa dolores ad pariatur debitis perspiciatis. Eius sequi tempora
+                                    laudantium, vel molestiae nemo dolores assumenda, magni eaque blanditiis earum
+                                    reprehenderit.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-1-of-4">
+                            <div class="feature-box">
+                                <i class="feature-box__icon icon-basic-world"></i>
+                                <h3 class="theh3">World</h3>
+                                <p class="feature-box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Tempora in ipsa dolores ad pariatur debitis perspiciatis. Eius sequi tempora
+                                    laudantium, vel molestiae nemo dolores assumenda, magni eaque blanditiis earum
+                                    reprehenderit.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-1-of-4">
+                            <div class="feature-box">
+                                <i class="feature-box__icon icon-basic-map"></i>
+                                <h3 class="theh3">Map</h3>
+                                <p class="feature-box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Tempora in ipsa dolores ad pariatur debitis perspiciatis. Eius sequi tempora
+                                    laudantium, vel molestiae nemo dolores assumenda, magni eaque blanditiis earum
+                                    reprehenderit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--       section backface feature      -->
+            <section class="backface-feature" id="backface-feature">
+                <div class="centering-text">
+                    <h2 class="heading-secondary">
+                        if only I could write proper CSS
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <!-- front card -->
+                            <div class="card-side card-side--front">
+                                <div class="card__img card__img--1">
+                                </div>
+                                <div class="card__heading">
+                                    <h2 class="card__heading_h2">
+                                        <span class="card__heading_span card__heading_span--1">First photoshoot</span>
+                                    </h2>
+                                </div>
+                                <div class="card__list">
+                                    <ul>
+                                        <li>Should start</li>
+                                        <li>Coding something</li>
+                                        <li>After this</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- back card -->
+                            <div class="card-side card-side--back card-side--back-color1 flex-center ">
+                                <div class="story">
+                                    <figure class="story_shape">
+
+                                        <img class="story_shape_img-1" src="img/oleafahsion.jpg" alt="adams_img">
+                                        <figcaption class="story_caption ">Olga Pirvu</figcaption>
+                                    </figure>
+                                    <div class="story_text">
+                                        <h2>Welcome to San Trope</h2>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellat
+                                            beatae
+                                            aperiam exercitationem neque commodi, aliquid aliquam explicabo libero,
+                                            nihil
+                                            earum eveniet? Quis exercitationem necessitatibus, natus quaerat dignissimos
+                                            voluptatem iure.</p>
+                                    </div>
+                                    <a class="btn-form-submit " href="#popup">Submit</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <!-- front card -->
+                            <div class="card-side card-side--front">
+                                <div class="card__img card__img--2">
+                                </div>
+                                <div class="card__heading">
+                                    <h2 class="card__heading_h2">
+                                        <span class="card__heading_span card__heading_span--2">Father's boy</span>
+                                    </h2>
+                                </div>
+                                <div class="card__list">
+                                    <ul>
+                                        <li>Or maybe</li>
+                                        <li>You shouldn't read</li>
+                                        <li>This</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- back card -->
+                            <div class="card-side card-side--back card-side--back-color2 flex-center">
+                                <div class="story">
+                                    <figure class="story_shape">
+                                        <img class="story_shape_img-2"
+                                            src="img/64611310_2321367528123123_3132106627184852992_o.jpg"
+                                            alt="adams_img">
+                                        <figcaption class="story_caption ">Vitalie Melnic</figcaption>
+                                    </figure>
+                                    <div class="story_text">
+                                        <h2>Be great at what you do</h2>
+                                        <p>When Vitalie say's jump you jump</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <!--front card -->
+                            <div class="card-side card-side--front">
+                                <div class="card__img card__img--3">
+                                </div>
+                                <div class="card__heading">
+                                    <h2 class="card__heading_h2">
+                                        <span class="card__heading_span card__heading_span--3">Teething now</span>
+                                    </h2>
+                                </div>
+                                <div class="card__list">
+                                    <ul>
+                                        <li>we don't sleep</li>
+                                        <li>because he doesn't sleep</li>
+                                        <li>the end</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- back card -->
+                            <div class="card-side card-side--back card-side--back-color3 ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="video-background">
+                <div class="video-bg">
+                    <video class="video-bg__content" autoplay muted loop>
+                        <source src="img/Golden_Gate_Traffic.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="video-form" id="form">
+                    <div class="form">
+                        <div>
+                            <h2 class="heading-secondary margin-top">
+                                leave your contacts
+                            </h2>
+                            <form action="#" class="input-form">
+                                <div class="input-form__container">
+                                    <input type="text" class="input-form__input" placeholder="Leave your name" required
+                                        id="name">
+                                    <label class="input-form__label" for="name">Leave your name</label>
+                                </div>
+                                <div class="input-form__container">
+                                    <input type="email" class="input-form__input" placeholder="Email" required
+                                        id="email">
+                                    <label class="input-form__label" for="email">Email</label>
+                                </div>
+                                <div class="input-form__container">
+                                    <div class="radio-group">
+                                        <input type="radio" class="form-radio-input" id="M" name="sex">
+                                        <label for="M" class="form-radio-label"><span class="form-radio-button"></span>M
+                                        </label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="radio" class="form-radio-input" id="F" name="sex">
+                                        <label for="F" class="form-radio-label">
+                                            <span class="form-radio-button"></span>F
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <button type="submit" class="btn-form-submit ">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer__logo">
+                <a class="footer__logo__link" href="#"><svg class="footer__logo--svg" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 461.59 286.92" style="enable-background:new 0 0 461.59 286.92;"
+                        xml:space="preserve">
+                        <polyline class="st0"
+                            points="141,56.48 186.1,0.27 461,0.48 409.88,63.99 230.99,286.28 0.99,0.48 81.47,0.48 230.99,186.28 
+               329.42,63.98 345.22,44.99 329.12,44.99 230.99,166.28 191,116.48 248.93,44.98 230.84,44.97 180.99,106.28 " />
+                    </svg>&copy;vmwhoami <span class="footer__logo--name">Vitalie Melnic 2020</span>
+                </a>
+            </div>
+        </footer>
+
+        <div class="popup" id="popup">
+            <div class="popup-container">
+                <div class="popup-img">
+                    <img srcset="img/SPH_2551-1.jpg 509w,img/SPH_2551.jpg 1200w"
+                        sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam" class="popup-img--img"
+                        alt="olea" src='img/SPH_2551-1.jpg'>
+
+                </div>
+                <div class="popup-content">
+                    <h2 class="heading-secondary margin-top">
+                        Super heading goes here
+                    </h2>
+                    <p class="popup-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nihil,
+                        magnam mollitia,
+                        nostrum enim consectetur, illum est dignissimos praesentium ullam inventore repudiandae
+                        molestias modi itaque. Cupiditate alias modi aspernatur delectus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur id nesciunt dolor facilis
+                        fugit maiores tempore! Aliquid omnis ratione delectus, pariatur distinctio quis eius? Dolor
+                        quidem fugiat illo inventore numquam.</p>
+                    <a class="btn-form-submit " href="#popup">Book now</a>
+                    <a class="popup-close" href="#backface-feature">&times;</a>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <section class="grid-test">
+            <div class="row">
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-2-of-3">
+                    Col 2 of 3
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-2-of-4">
+                    Col 2 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-3-of-4">
+                    Col 3 of 4
+                </div>
+            </div>
+        </section> -->
+
+
+    </div>
+</body>
+
+</html>
