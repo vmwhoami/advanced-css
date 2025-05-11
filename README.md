@@ -40,6 +40,10 @@ $ git clone https://github.com/vmwhoami/advanced-css
 
 ```
 
+```
+npm run watch:sass
+```
+
 ## Authors
 
 **Vitalie Melnic**
