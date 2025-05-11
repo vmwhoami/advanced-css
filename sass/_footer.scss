@@ -1,39 +1,39 @@
 @use "variables";
 
 .footer {
-    height: 60vh;
-    width: 100%;
-    background-color: variables.$gray-text;
-    position: relative;
-    margin-top: -20rem;
+  height: 60vh;
+  width: 100%;
+  background-color: variables.$gray-text;
+  position: relative;
+  margin-top: -20rem;
 
-    &__logo {
-        position: absolute;
-        width: auto;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
+  &__logo {
+    position: absolute;
+    width: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-        &--svg {
-            fill: white;
-            width: 10rem;
-        }
-
-        &__link {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            font-size: 1.4rem;
-            text-transform: uppercase;
-        }
-
-        &--name {
-            font-size: 1.5rem;
-            color: white;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
+    &--svg {
+      fill: white;
+      width: 10rem;
     }
+
+    &__link {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &--name {
+      font-size: 1.5rem;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
 }

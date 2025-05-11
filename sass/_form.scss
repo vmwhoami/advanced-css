@@ -2,19 +2,16 @@
 @use "variables";
 
 .form {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 40rem;
-    margin: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 40rem;
+  margin: 2rem;
 
-    @include mixin.respond(tablet-port) {
-        width: 70rem;
-    }
+  @include mixin.respond(tablet-port) {
+    width: 70rem;
+  }
 }
-
-
-
 
 // .input-form__container:not(:last-child){
 //     margin-bottom: 0;
@@ -22,93 +19,89 @@
 // }
 
 .input-form__input {
-    background-color: #ffffff20;
-    padding: 1.5rem 2rem;
-    font-size: 1.5rem;
-    border: none;
-    box-shadow: 0 2rem 1rem #00000020;
-    font-family: inherit;
-    border-bottom: 3px solid transparent;
-    width: 90%;
-    display: block;
-    transition: all .3s;
+  background-color: #ffffff20;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: 0 2rem 1rem #00000020;
+  font-family: inherit;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all 0.3s;
 
+  &::-webkit-input-placeholder {
+    color: #999;
+  }
 
+  &:focus {
+    outline: none;
+    background-color: #ffffff90;
+    border-bottom: 3px solid greenyellow;
+    box-shadow: 0 0.5rem 2rem #00000060;
+  }
 
-    &::-webkit-input-placeholder {
-        color: #999;
-    }
-
-    &:focus {
-        outline: none;
-        background-color: #ffffff90;
-        border-bottom: 3px solid greenyellow;
-        box-shadow: 0 .5rem 2rem #00000060;
-    }
-
-    &:focus:invalid {
-        border-bottom: 3px solid rgb(138, 0, 0);
-    }
-
+  &:focus:invalid {
+    border-bottom: 3px solid rgb(138, 0, 0);
+  }
 }
 
-.input-form__input:placeholder-shown+.input-form__label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-3rem);
+.input-form__input:placeholder-shown + .input-form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
 }
 
 .input-form__label {
-    font-size: 1.2rem;
-    color: #999;
-    font-weight: 600;
-    margin-left: 2rem;
-    padding-top: .6rem;
-    display: block;
-    transition: all .3s;
+  font-size: 1.2rem;
+  color: #999;
+  font-weight: 600;
+  margin-left: 2rem;
+  padding-top: 0.6rem;
+  display: block;
+  transition: all 0.3s;
 }
 
 .radio-group {
-    width: 40%;
-    display: inline-block;
+  width: 40%;
+  display: inline-block;
 }
 
-
 .form-radio-label {
-    font-size: 1.6rem;
-    cursor: pointer;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
 .form-radio-button {
-    height: 3rem;
-    width: 3rem;
-    border: .5rem solid variables.$gradient-color2;
+  height: 3rem;
+  width: 3rem;
+  border: 0.5rem solid variables.$gradient-color2;
+  display: block;
+  position: relative;
+
+  &::after {
+    content: "";
     display: block;
-    position: relative;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: variables.$gradient-color2;
 
-    &::after {
-        content: "";
-        display: block;
-        height: 1.2rem;
-        width: 1.2rem;
-        background-color: variables.$gradient-color2;
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: opacity .3s;
-    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
 }
 
-.form-radio-input:checked~.form-radio-label .form-radio-button::after {
-    opacity: 1;
+.form-radio-input:checked ~ .form-radio-label .form-radio-button::after {
+  opacity: 1;
 }
 
 .form-radio-input {
-    display: none;
+  display: none;
 }

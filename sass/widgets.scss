@@ -3,86 +3,81 @@
 
 //centering text
 .centering-text {
-    text-align: center;
+  text-align: center;
 }
 
 .margin-top {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .composition {
-    position: relative;
-    // margin-left: 20rem;
+  position: relative;
+  // margin-left: 20rem;
+
+  @include mixin.respond(tablet-port) {
+    width: 90%;
+  }
+
+  &_img {
+    width: 45%;
+    transition: all 0.3s;
+    box-shadow: 0 0 4rem #303030;
+    outline-offset: 1rem;
 
     @include mixin.respond(tablet-port) {
-        width: 90%;
+      width: 70%;
     }
 
-    &_img {
-        width: 45%;
-        transition: all .3s;
-        box-shadow: 0 0 4rem #303030;
-        outline-offset: 1rem;
-
-        @include mixin.respond(tablet-port) {
-            width: 70%;
-        }
-
-        &:hover {
-            z-index: 100;
-            top: 0;
-            transform: scale(1.2) translateY(-2rem);
-            outline: 2rem solid variables.$gradient-color1;
-        }
+    &:hover {
+      z-index: 100;
+      top: 0;
+      transform: scale(1.2) translateY(-2rem);
+      outline: 2rem solid variables.$gradient-color1;
     }
+  }
 
+  &_img1 {
+    position: absolute;
+    top: 4rem;
+    left: 0;
 
-
-    &_img1 {
-        position: absolute;
-        top: 4rem;
-        left: 0;
-
-        @include mixin.respond(tablet-port) {
-            top: 0;
-            left: 0;
-        }
+    @include mixin.respond(tablet-port) {
+      top: 0;
+      left: 0;
     }
+  }
 
-    &_img2 {
-        position: absolute;
-        top: 0;
-        left: 30%;
-        z-index: 2;
+  &_img2 {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    z-index: 2;
 
-        @include mixin.respond(tablet-port) {
-            left: 22%;
-            top: 20rem;
-            z-index: 2;
-        }
+    @include mixin.respond(tablet-port) {
+      left: 22%;
+      top: 20rem;
+      z-index: 2;
     }
+  }
 
-    &_img3 {
-        position: absolute;
-        top: 2rem;
-        left: 15%;
+  &_img3 {
+    position: absolute;
+    top: 2rem;
+    left: 15%;
 
-        @include mixin.respond(tablet-port) {
-            top: 0;
-            left: 45%;
-        }
+    @include mixin.respond(tablet-port) {
+      top: 0;
+      left: 45%;
     }
+  }
 
-
-
-    &:hover &_img:not(:hover) {
-        transform: scale(.8);
-    }
-
+  &:hover &_img:not(:hover) {
+    transform: scale(0.8);
+  }
 }

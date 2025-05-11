@@ -1,108 +1,105 @@
 @use "mixin";
 
 .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 400;
-    background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 400;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+
+  @supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
+    -webkit-backdrop-filter: blur(5px) grayscale(1);
+    backdrop-filter: blur(5px) grayscale(1);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &-container {
+    position: relative;
+    width: 75%;
+    height: 70vh;
+    background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    transition: all .3s;
+    flex-flow: row nowrap;
 
-    @supports(-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
-        -webkit-backdrop-filter: blur(5px) grayscale(1);
-        backdrop-filter: blur(5px) grayscale(1);
-        background-color: rgba(0, 0, 0, 0.2);
+    @include mixin.respond(tablet-port) {
+      flex-flow: column nowrap;
+      width: 90%;
+      height: 80vh;
+    }
+  }
+
+  &-img {
+    width: 35%;
+
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include mixin.respond(tablet-port) {
+        object-position: top;
+      }
     }
 
+    @include mixin.respond(tablet-port) {
+      width: 100%;
+      height: 33.333%;
+    }
+  }
 
-    &:target {
-        opacity: 1;
-        visibility: visible;
+  &-content {
+    width: 65%;
+    padding: 4rem;
+
+    @include mixin.respond(tablet-port) {
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+    }
+  }
+
+  &-text {
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid gray;
+    hyphens: auto;
+    font-size: 1.4rem;
+  }
+
+  &-close {
+    position: absolute;
+    display: inline-block;
+    font-size: 3rem;
+    line-height: 0;
+    top: 2rem;
+    right: 2rem;
+
+    @include mixin.respond(tablet-port) {
+      color: white;
     }
 
-
-    &-container {
-        position: relative;
-        width: 75%;
-        height: 70vh;
-        background-color: white;
-        display: flex;
-        flex-flow: row nowrap;
-
-        @include mixin.respond(tablet-port) {
-            flex-flow: column nowrap;
-            width: 90%;
-            height: 80vh;
-        }
+    &:link,
+    &:visited {
+      text-decoration: none;
     }
 
-    &-img {
-        width: 35%;
-
-        &--img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-            @include mixin.respond(tablet-port) {
-                object-position: top;
-            }
-        }
-
-        @include mixin.respond(tablet-port) {
-            width: 100%;
-            height: 33.333%;
-        }
+    &:hover {
+      color: red;
     }
-
-    &-content {
-        width: 65%;
-        padding: 4rem;
-
-        @include mixin.respond(tablet-port) {
-            width: 100%;
-            height: 100%;
-            padding: 2rem;
-        }
-    }
-
-    &-text {
-        column-count: 2;
-        column-gap: 4rem;
-        column-rule: 1px solid gray;
-        hyphens: auto;
-        font-size: 1.4rem;
-    }
-
-    &-close {
-        position: absolute;
-        display: inline-block;
-        font-size: 3rem;
-        line-height: 0;
-        top: 2rem;
-        right: 2rem;
-
-        @include mixin.respond(tablet-port) {
-            color: white;
-        }
-
-        &:link,
-        &:visited {
-            text-decoration: none;
-
-        }
-
-        &:hover {
-            color: red;
-        }
-    }
+  }
 }

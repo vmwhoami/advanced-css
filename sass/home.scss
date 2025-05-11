@@ -2,115 +2,110 @@
 @use "variables";
 
 .section-about {
-    background-color: variables.$color-grey-light1;
-    height: 100vh;
-    padding: 5rem 0 0;
-    margin-top: -5rem;
+  background-color: variables.$color-grey-light1;
+  height: 100vh;
+  padding: 5rem 0 0;
+  margin-top: -5rem;
 
-    p {
-        font-size: variables.$psizes;
-    }
+  p {
+    font-size: variables.$psizes;
+  }
 
-    @include mixin.respond(tablet-port) {
-        height: 140vh;
-    }
+  @include mixin.respond(tablet-port) {
+    height: 140vh;
+  }
 
-    @include mixin.respond(phone) {
-        height: 130vh;
-    }
+  @include mixin.respond(phone) {
+    height: 130vh;
+  }
 }
-
 
 //feature section
 .features {
-    height: 120vh;
-    position: relative;
-    margin-top: -5rem;
-    overflow: hidden;
-    transform: skewY(-2deg);
-    box-sizing: unset;
+  height: 120vh;
+  position: relative;
+  margin-top: -5rem;
+  overflow: hidden;
+  transform: skewY(-2deg);
+  box-sizing: unset;
+
+  @include mixin.respond(tablet-port) {
+    height: 170vh;
+  }
+
+  @include mixin.respond(phone) {
+    height: 200vh;
+  }
+
+  &-under {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../img/olea2.jpg") 0 30% no-repeat;
+    transform: scale(1.1);
+    filter: grayscale(50%) blur(0.8rem);
+    background-size: cover;
+
+    @media (max-width: 600px) {
+      background: url("../img/olea2-1.jpg") 0 30% no-repeat;
+    }
+  }
+
+  &-top {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e2495163, #e4217c6b);
+    padding: 20rem 0;
 
     @include mixin.respond(tablet-port) {
-        height: 170vh;
+      padding: 5rem 0;
     }
 
-    @include mixin.respond(phone) {
-        height: 200vh;
+    @include mixin.respond(tablet-land) {
+      padding: 20rem 0;
     }
 
-
-    &-under {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url("../img/olea2.jpg") 0 30% no-repeat;
-        transform: scale(1.1);
-        filter: grayscale(50%) blur(.8rem);
-        background-size: cover;
-
-        @media(max-width:600px) {
-            background: url("../img/olea2-1.jpg") 0 30% no-repeat;
-        }
+    & > * {
+      transform: skewY(2deg);
     }
-
-    &-top {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#e2495163, #e4217c6b);
-        padding: 20rem 0;
-
-        @include mixin.respond(tablet-port) {
-            padding: 5rem 0;
-        }
-
-        @include mixin.respond(tablet-land) {
-            padding: 20rem 0;
-        }
-
-        &>* {
-            transform: skewY(2deg);
-        }
-    }
-
-
+  }
 }
 
 .feature-box {
-    background-color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    padding: 1rem 1rem 2rem;
-    border-radius: .5rem;
-    font-size: 1.5rem;
-    transition: all .3s;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 1rem 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  transition: all 0.3s;
 
-    &__icon {
-        font-size: 5rem;
-        background: linear-gradient(#e2495163, #e4217c6b);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
+  &__icon {
+    font-size: 5rem;
+    background: linear-gradient(#e2495163, #e4217c6b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 
-    &:hover {
-        transform: translateY(-.5rem) scale(1.1);
-        box-shadow: 0 2px 2rem #00000055;
-
-    }
+  &:hover {
+    transform: translateY(-0.5rem) scale(1.1);
+    box-shadow: 0 2px 2rem #00000055;
+  }
 }
 
 //section backface-feature
 .backface-feature {
-    background-color: variables.$color-grey-light1;
-    height: 120vh;
-    padding: 10rem 0 0;
-    margin-top: -5rem;
+  background-color: variables.$color-grey-light1;
+  height: 120vh;
+  padding: 10rem 0 0;
+  margin-top: -5rem;
 
-    @include mixin.respond(tablet-port) {
-        height: 220vh;
-    }
+  @include mixin.respond(tablet-port) {
+    height: 220vh;
+  }
 
-    @include mixin.respond(phone) {
-        height: 210vh;
-    }
+  @include mixin.respond(phone) {
+    height: 210vh;
+  }
 }

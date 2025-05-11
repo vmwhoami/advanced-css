@@ -3,132 +3,132 @@
 
 .btn,
 .btn:focus {
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    text-shadow: 0 0 .2rem #333333;
-    padding: 40px;
-    letter-spacing: .1rem;
-    border: none;
-    color: white;
-    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 75% no-repeat;
-    background-size: 10rem;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all .5s;
-    animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 0 0.2rem #333333;
+  padding: 40px;
+  letter-spacing: 0.1rem;
+  border: none;
+  color: white;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png")
+    50% 75% no-repeat;
+  background-size: 10rem;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s;
+  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
 
-    @include mixin.respond(phone) {
-        font-size: 1.2rem;
-    }
+  @include mixin.respond(phone) {
+    font-size: 1.2rem;
+  }
 }
 
 .btn:active {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .btn:hover {
-    transform: scale(1.2);
-
+  transform: scale(1.2);
 }
 
 .btn::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 60% no-repeat;
-    background-size: 10rem;
-    z-index: -1;
-    transition: all .2s;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png")
+    50% 60% no-repeat;
+  background-size: 10rem;
+  z-index: -1;
+  transition: all 0.2s;
 }
 
 .btn:hover::after {
-    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png") 50% 60% no-repeat;
-    background-size: 11rem;
-    transform: scaleY(1.4) scaleX(1.6);
-    opacity: 0;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Emoji_u2665.svg/1200px-Emoji_u2665.svg.png")
+    50% 60% no-repeat;
+  background-size: 11rem;
+  transform: scaleY(1.4) scaleX(1.6);
+  opacity: 0;
 }
 
 .btn-text,
 .btn-text:link,
 .btn-text:visited {
-    margin: 2rem 1rem;
-    display: inline-block;
-    color: variables.$gradient-color2;
-    text-decoration: none;
-    font-size: variables.$psizes;
-    padding: 0 3px 3px;
-    border-bottom: 1px solid variables.$gradient-color2;
-    transition: all .2s;
+  margin: 2rem 1rem;
+  display: inline-block;
+  color: variables.$gradient-color2;
+  text-decoration: none;
+  font-size: variables.$psizes;
+  padding: 0 3px 3px;
+  border-bottom: 1px solid variables.$gradient-color2;
+  transition: all 0.2s;
 
-    &:hover {
-        background: variables.$main-grad;
-        color: white;
-        transform: translateY(-.5rem);
-        box-shadow: -.6rem .6rem .5rem rgba(44, 44, 44, 0.2);
-    }
+  &:hover {
+    background: variables.$main-grad;
+    color: white;
+    transform: translateY(-0.5rem);
+    box-shadow: -0.6rem 0.6rem 0.5rem rgba(44, 44, 44, 0.2);
+  }
 
-    &:active {
-        transform: translateY(-.2rem);
-        box-shadow: -.3rem .3rem .2rem rgba(44, 44, 44, 0.4);
-    }
+  &:active {
+    transform: translateY(-0.2rem);
+    box-shadow: -0.3rem 0.3rem 0.2rem rgba(44, 44, 44, 0.4);
+  }
 }
 
 // the submit button
 .btn-form-submit,
 .btn-form-submit:link,
 .btn-form-submit:visited {
-    text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 0 0.2rem #333333;
+  padding: 1rem 2rem;
+  letter-spacing: 0.4rem;
+  border: none;
+  color: white;
+  background: variables.$main-grad;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  margin-top: variables.$m-1;
+  margin: 2rem;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.2rem 0.5rem #33333350;
+  }
+
+  &:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.2rem 0.2rem #33333350;
+    outline: none;
+  }
+
+  &::after {
+    content: "";
     display: inline-block;
-    position: relative;
-    text-shadow: 0 0 .2rem #333333;
-    padding: 1rem 2rem;
-    letter-spacing: .4rem;
-    border: none;
-    color: white;
-    background: variables.$main-grad;
-    border-radius: .5rem;
-    transition: all .2s;
-    text-transform: uppercase;
-    margin-top: variables.$m-1;
-    margin: 2rem;
-
-
-    &:hover {
-        transform: translateY(-.5rem);
-        box-shadow: 0 .2rem .5rem #33333350;
-    }
-
-    &:active {
-        transform: translateY(-.2rem);
-        box-shadow: 0 .2rem .2rem #33333350;
-        outline: none;
-    }
-
-    &::after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        border-radius: .5rem;
-        background-color: variables.$gradient-color1;
-        z-index: -1;
-        transition: all .2s;
-    }
-
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    background-color: variables.$gradient-color1;
+    z-index: -1;
+    transition: all 0.2s;
+  }
 }
 
 .btn-form-submit:hover::after {
-    transform: scaleX(1.5) scaleY(2);
-    opacity: 0;
+  transform: scaleX(1.5) scaleY(2);
+  opacity: 0;
 }

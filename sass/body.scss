@@ -3,40 +3,34 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-
-
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 
-    @include mixin.respond(tablet-land) {
-        font-size: 56.25%;
-    }
+  @include mixin.respond(tablet-land) {
+    font-size: 56.25%;
+  }
 
+  @include mixin.respond(tablet-port) {
+    font-size: 50%;
+  }
 
-    @include mixin.respond(tablet-port) {
-        font-size: 50%;
-    }
-
-
-    @include mixin.respond(comp) {
-        font-size: 75%;
-    }
-
+  @include mixin.respond(comp) {
+    font-size: 75%;
+  }
 }
 
 body {
-    box-sizing: border-box;
-    line-height: 1.7;
-    font-family: 'Lato', sans-serif;
-    margin: 1rem 2rem;
+  box-sizing: border-box;
+  line-height: 1.7;
+  font-family: "Lato", sans-serif;
+  margin: 1rem 2rem;
 
-    @include mixin.respond(tablet-port) {
-        margin: 0;
-    }
-
+  @include mixin.respond(tablet-port) {
+    margin: 0;
+  }
 }

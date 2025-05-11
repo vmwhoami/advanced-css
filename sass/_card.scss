@@ -1,164 +1,164 @@
 @use "variables";
 
 .card {
-    perspective: 150rem;
-    -moz-perspective: 150rem;
-    position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 55vh;
+
+  //Card functionality
+  &-side {
     height: 55vh;
+    transition: transform 1s ease;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 
-    //Card functionality
-    &-side {
-
-        height: 55vh;
-        transition: transform 1s ease;
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-
-        &--front {
-            background-color: white;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-
-        }
-
-        //back of the card
-
-        &--back {
-            transform: rotateX(180deg);
-
-
-            &-color1 {
-                background: variables.$main-grad;
-            }
-
-            &-color2 {
-                background: variables.$second-grad;
-            }
-
-            &-color3 {
-                background: variables.$third-grad;
-            }
-        }
+    &--front {
+      background-color: white;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
+    //back of the card
 
-    &:hover &-side--front {
-        transform: rotateX(-180deg);
+    &--back {
+      transform: rotateX(180deg);
+
+      &-color1 {
+        background: variables.$main-grad;
+      }
+
+      &-color2 {
+        background: variables.$second-grad;
+      }
+
+      &-color3 {
+        background: variables.$third-grad;
+      }
+    }
+  }
+
+  &:hover &-side--front {
+    transform: rotateX(-180deg);
+  }
+
+  &:hover &-side--back {
+    transform: rotateX(0);
+  }
+
+  //card content
+  &__img {
+    height: 100%;
+    // border-radius: .5rem;
+    position: relative;
+
+    &--1 {
+      background: variables.$main-grad, url("../img/SPH_2551.jpg") no-repeat;
+      background-position: 0 -10rem;
+      background-size: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+      clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+
+      @media (max-width: 600px) {
+        background: variables.$main-grad, url("../img/SPH_2551-1.jpg") no-repeat;
+      }
     }
 
-    &:hover &-side--back {
-        transform: rotateX(0);
+    &--2 {
+      background: variables.$second-grad,
+        url("../img/55560333_2264432760483267_417581399399202816_o.jpg")
+          no-repeat;
+
+      background-size: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+      clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+
+      @media (max-width: 600px) {
+        background: variables.$second-grad,
+          url("../img/55560333_2264432760483267_417581399399202816_o-1.jpg")
+            no-repeat;
+      }
     }
 
-    //card content
-    &__img {
-        height: 100%;
-        // border-radius: .5rem;
-        position: relative;
+    &--3 {
+      background: variables.$third-grad,
+        url("../img/48402800_2201342623458948_7232344439606214656_o.jpg")
+          no-repeat;
+      background-position: 0 -2rem;
+      background-size: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+      clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
 
-        &--1 {
-            background: variables.$main-grad, url('../img/SPH_2551.jpg') no-repeat;
-            background-position: 0 -10rem;
-            background-size: 100%;
-            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
-            clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+      @media (max-width: 600px) {
+        background: variables.$third-grad,
+          url("../img/48402800_2201342623458948_7232344439606214656_o-1.jpg")
+            no-repeat;
+      }
+    }
+  }
 
-            @media(max-width:600px) {
-                background: variables.$main-grad, url('../img/SPH_2551-1.jpg') no-repeat;
-            }
-        }
+  &__heading {
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 
-        &--2 {
-            background: variables.$second-grad, url('../img/55560333_2264432760483267_417581399399202816_o.jpg') no-repeat;
+    &_h2 {
+      color: white;
+      padding-right: 3rem;
+      font-size: 2.5rem;
+    }
+  }
 
-            background-size: 100%;
-            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
-            clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
+  &__heading_span {
+    -webkit-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 2rem;
 
-            @media(max-width:600px) {
-                background: variables.$second-grad, url('../img/55560333_2264432760483267_417581399399202816_o-1.jpg') no-repeat;
-            }
-        }
-
-        &--3 {
-            background: variables.$third-grad, url('../img/48402800_2201342623458948_7232344439606214656_o.jpg') no-repeat;
-            background-position: 0 -2rem;
-            background-size: 100%;
-            -webkit-clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
-            clip-path: polygon(0 0, 100% 0%, 100% 46%, 0 56%);
-
-            @media (max-width:600px) {
-                background: variables.$third-grad, url('../img/48402800_2201342623458948_7232344439606214656_o-1.jpg') no-repeat;
-            }
-
-        }
+    &--1 {
+      background-image: variables.$main-grad;
     }
 
-    &__heading {
-        position: absolute;
-        width: 60%;
-        height: 50%;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-
-        &_h2 {
-            color: white;
-            padding-right: 3rem;
-            font-size: 2.5rem;
-        }
+    &--2 {
+      background-image: variables.$second-grad;
     }
 
-    &__heading_span {
-        -webkit-decoration-break: clone;
-        box-decoration-break: clone;
-        padding: 0 2rem;
-
-        &--1 {
-            background-image: variables.$main-grad;
-        }
-
-        &--2 {
-            background-image: variables.$second-grad;
-        }
-
-        &--3 {
-            background-image: variables.$third-grad;
-        }
+    &--3 {
+      background-image: variables.$third-grad;
     }
+  }
 
-    &__list {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 60%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  &__list {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        & ul {
-            list-style: none;
-            width: 80%;
+    & ul {
+      list-style: none;
+      width: 80%;
 
-            li {
-                text-align: center;
-                font-size: 1.5rem;
+      li {
+        text-align: center;
+        font-size: 1.5rem;
 
-                &:not(:last-child) {
-                    padding: 1rem 2rem;
-                    border-bottom: 1px solid #eee;
-                }
-            }
-
-
+        &:not(:last-child) {
+          padding: 1rem 2rem;
+          border-bottom: 1px solid #eee;
         }
-
+      }
     }
+  }
 }

@@ -1,66 +1,69 @@
 @use "mixin";
 
 .video-background {
-    // background-color: $color-grey-light1;
+  // background-color: $color-grey-light1;
+  margin-top: -10rem;
+  height: 100vh;
+  position: relative;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  z-index: 2;
+
+  @include mixin.respond(tablet-port) {
     margin-top: -10rem;
-    height: 100vh;
-    position: relative;
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-    z-index: 2;
-
-    @include mixin.respond(tablet-port) {
-        margin-top: -10rem;
-        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
-
-    }
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  }
 }
 
 .video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  &__content {
     width: 100%;
     height: 100%;
-    z-index: -1;
-
-    &__content {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: .6;
-        -moz-filter: grayscale(.2) blur(3px);
-        filter: grayscale(.2) blur(3px);
-
-    }
+    object-fit: cover;
+    opacity: 0.6;
+    -moz-filter: grayscale(0.2) blur(3px);
+    filter: grayscale(0.2) blur(3px);
+  }
 }
 
 .video-form {
-    // background: white;
-    top: 25%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(95deg,
-            rgba(2, 0, 36, 1) 0%,
-            rgba(255, 255, 255, 0.7035189075630253) 0%,
-            rgba(255, 255, 255, 0.7035189075630253) 44%,
-            rgba(0, 0, 0, 0) 44%, rgba(0, 0, 0, 0) 100%),
-        url('../img/adam.jpg') top;
-    box-shadow: 0 1rem 4rem #00000021;
-    height: 60%;
-    width: 80%;
-    z-index: 100;
-    margin: 0 auto;
-    position: relative;
+  // background: white;
+  top: 25%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+      95deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(255, 255, 255, 0.7035189075630253) 0%,
+      rgba(255, 255, 255, 0.7035189075630253) 44%,
+      rgba(0, 0, 0, 0) 44%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/adam.jpg") top;
+  box-shadow: 0 1rem 4rem #00000021;
+  height: 60%;
+  width: 80%;
+  z-index: 100;
+  margin: 0 auto;
+  position: relative;
 
-
-    @include mixin.respond(tablet-port) {
-        top: 20%;
-        height: 50%;
-        width: 95%;
-        background: linear-gradient(95deg,
-                rgba(2, 0, 36, 1) 0%,
-                rgba(255, 255, 255, 0.7035189075630253) 0%,
-                rgba(255, 255, 255, 0.7035189075630253) 80%,
-                rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%),
-            url('../img/adam.jpg') top;
-    }
+  @include mixin.respond(tablet-port) {
+    top: 20%;
+    height: 50%;
+    width: 95%;
+    background: linear-gradient(
+        95deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(255, 255, 255, 0.7035189075630253) 0%,
+        rgba(255, 255, 255, 0.7035189075630253) 80%,
+        rgba(0, 0, 0, 0) 80%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      url("../img/adam.jpg") top;
+  }
 }

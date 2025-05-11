@@ -1,16 +1,16 @@
 @mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin absoluteCenter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 //Media querry manager
@@ -18,46 +18,31 @@
 // 2. Header footer navigation
 // 3. General layout and the grid
 @mixin respond($breakpoint) {
-    @if $breakpoint==phone {
-        @media (max-width:37.5em) {
-            //600px
-            @content
-        }
-
-        ;
+  @if $breakpoint==phone {
+    @media (max-width: 37.5em) {
+      //600px
+      @content;
     }
+  }
 
-
-
-    @if $breakpoint==tablet-port {
-        @media (max-width:56.25em) {
-            //900px
-            @content
-        }
-
-        ;
+  @if $breakpoint==tablet-port {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
     }
+  }
 
-
-    @if $breakpoint==tablet-land {
-        @media (max-width:75em) {
-            //1200px
-            @content
-        }
-
-        ;
+  @if $breakpoint==tablet-land {
+    @media (max-width: 75em) {
+      //1200px
+      @content;
     }
+  }
 
-
-
-    @if $breakpoint==comp {
-        @media (min-width:112.5em) {
-            //
-            @content
-        }
-
-        ;
+  @if $breakpoint==comp {
+    @media (min-width: 112.5em) {
+      //
+      @content;
     }
-
-
+  }
 }
