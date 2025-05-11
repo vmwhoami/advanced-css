@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/vmlogo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.concat.css">
-    <script src=" https://kit.fontawesome.com/40ad9e98a9.js" crossorigin="anonymous">
-    </script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/40ad9e98a9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>Advanced Css</title>
 </head>
 
 <body>
-    <div class="container">
+    <div id="app" class="container">
         <div class="navigation logo">
             <input type="checkbox" name="nav" id="nav" class="navigation-checkbox">
             <label for="nav" class="navigation-handle">
@@ -27,8 +25,7 @@
                     <li class="navigation-item"><a href="#" class="navigation-link"> About </a></li>
                     <li class="navigation-item"><a href="#" class="navigation-link"> Who are we</a></li>
                     <li class="navigation-item"><a href="#" class="navigation-link"> Who are you</a></li>
-                    <li class="navigation-item"><a href="#form" class="navigation-link"> are we who are you?</a>
-                    </li>
+                    <li class="navigation-item"><a href="#form" class="navigation-link"> are we who are you?</a></li>
                     <li class="navigation-item"><a href="#" class="navigation-link"> Who who who?</a></li>
                 </ul>
             </div>
@@ -55,31 +52,18 @@
                 <div class="row">
                     <div class="col-1-of-2">
                         <h3 class="theh3">You are going to fall in love with her</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sed repellendus sapiente
-                            consequatur iure assumenda natus ea nesciunt cum. Ipsam eius tempore est impedit ipsa
-                            perferendis eos officiis ad quam.</p>
-                        <h3 class="theh3">Cupiditate culpa </h3>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis eius voluptas, necessitatibus
-                            fugit cupiditate culpa doloremque exercitationem minus.
-                        </p>
+                        <p>My wife, who has danced alongside me in theaters and clubs across Moldova, Romania, and China, brings an unparalleled spark of creativity and warmth to our family life.</p>
+                      
+                        <p>Her unwavering support during my recovery from brain surgery and radiotherapy has shown me the true meaning of resilience and partnership.</p>
                         <a href="" class="btn-text">Learn more &rarr;</a>
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img srcset=" img/adam-1.jpg 509w,img/adam.jpg 1200w"
-                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam"
-                                class="composition_img composition_img1" src="img/adam-1.jpg">
+                            <img srcset=" img/adam-1.jpg 509w,img/adam.jpg 1200w" sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam" class="composition_img composition_img1" src="img/adam-1.jpg">
 
-                            <img srcset=" img/48402800_2201342623458948_7232344439606214656_o-1.jpg 509w,img/48402800_2201342623458948_7232344439606214656_o.jpg 1200w"
-                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam"
-                                class="composition_img composition_img2"
-                                src="img/48402800_2201342623458948_7232344439606214656_o-1.jpg">
+                            <img srcset=" img/48402800_2201342623458948_7232344439606214656_o-1.jpg 509w,img/48402800_2201342623458948_7232344439606214656_o.jpg 1200w" sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam" class="composition_img composition_img2" src="img/48402800_2201342623458948_7232344439606214656_o-1.jpg">
 
-                            <img srcset="img/39089010_2126752534251291_4189254548684013568_o-1.jpg 509w,img/39089010_2126752534251291_4189254548684013568_o.jpg 1200w"
-                                sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam"
-                                class="composition_img composition_img3"
-                                src="img/39089010_2126752534251291_4189254548684013568_o-1.jpg">
+                            <img srcset="img/39089010_2126752534251291_4189254548684013568_o-1.jpg 509w,img/39089010_2126752534251291_4189254548684013568_o.jpg 1200w" sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam" class="composition_img composition_img3" src="img/39089010_2126752534251291_4189254548684013568_o-1.jpg">
                         </div>
                     </div>
                 </div>
@@ -93,20 +77,14 @@
                             <div class="feature-box">
                                 <i class="feature-box__icon icon-basic-spades"></i>
                                 <h3 class="theh3">Love</h3>
-                                <p class="feature-box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Tempora in ipsa dolores ad pariatur debitis perspiciatis. Eius sequi tempora
-                                    laudantium, vel molestiae nemo dolores assumenda, magni eaque blanditiis earum
-                                    reprehenderit.</p>
+                                <p class="feature-box_text">Our bond, strengthened by the joys and challenges of raising our six-year-old son and pursuing creative passions, is the cornerstone of our family.</p>
                             </div>
                         </div>
                         <div class="col-1-of-4">
                             <div class="feature-box">
                                 <i class="feature-box__icon icon-basic-watch"></i>
                                 <h3 class="theh3">Time</h3>
-                                <p class="feature-box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Tempora in ipsa dolores ad pariatur debitis perspiciatis. Eius sequi tempora
-                                    laudantium, vel molestiae nemo dolores assumenda, magni eaque blanditiis earum
-                                    reprehenderit.</p>
+                                <p class="feature-box_text">Whether I’m coding late into the night or filming for my YouTube channel, she reminds me that moments with family are our most precious asset.</p>
                             </div>
                         </div>
 
@@ -114,10 +92,7 @@
                             <div class="feature-box">
                                 <i class="feature-box__icon icon-basic-world"></i>
                                 <h3 class="theh3">World</h3>
-                                <p class="feature-box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Tempora in ipsa dolores ad pariatur debitis perspiciatis. Eius sequi tempora
-                                    laudantium, vel molestiae nemo dolores assumenda, magni eaque blanditiis earum
-                                    reprehenderit.</p>
+                                <p class="feature-box_text">Together we’ve experienced the rich cultures of Moldova, Romania, and China, and brought those global insights into our home through dance, art, and coding.</p>
                             </div>
                         </div>
 
@@ -125,16 +100,13 @@
                             <div class="feature-box">
                                 <i class="feature-box__icon icon-basic-map"></i>
                                 <h3 class="theh3">Map</h3>
-                                <p class="feature-box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Tempora in ipsa dolores ad pariatur debitis perspiciatis. Eius sequi tempora
-                                    laudantium, vel molestiae nemo dolores assumenda, magni eaque blanditiis earum
-                                    reprehenderit.</p>
+                                <p class="feature-box_text">No matter where life leads us, we chart our family’s course—me, my incredible wife, and our curious little boy—guided by love, creativity, and resilience.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!--       section backface feature      -->
+
             <section class="backface-feature" id="backface-feature">
                 <div class="centering-text">
                     <h2 class="heading-secondary">
@@ -171,13 +143,8 @@
                                         <figcaption class="story_caption ">Olga Pirvu</figcaption>
                                     </figure>
                                     <div class="story_text">
-                                        <h2>Welcome to San Trope</h2>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum repellat
-                                            beatae
-                                            aperiam exercitationem neque commodi, aliquid aliquam explicabo libero,
-                                            nihil
-                                            earum eveniet? Quis exercitationem necessitatibus, natus quaerat dignissimos
-                                            voluptatem iure.</p>
+                                        <h2>My wife dancing career ends</h2>
+                                        <p>My wife, a professional dancer who built her career performing in theaters in Chisinau, Bucharest, and Shanghai, as well as clubs and freelance gigs, brings an unparalleled spark of creativity and warmth to our family life, inspiring us every day with her grace and passion.</p>
                                     </div>
                                     <a class="btn-form-submit " href="#popup">Submit</a>
 
@@ -248,6 +215,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Cards omitted for brevity -->
                 </div>
             </section>
 
@@ -266,26 +234,21 @@
                             </h2>
                             <form action="#" class="input-form">
                                 <div class="input-form__container">
-                                    <input type="text" class="input-form__input" placeholder="Leave your name" required
-                                        id="name">
+                                    <input type="text" class="input-form__input" placeholder="Leave your name" required id="name">
                                     <label class="input-form__label" for="name">Leave your name</label>
                                 </div>
                                 <div class="input-form__container">
-                                    <input type="email" class="input-form__input" placeholder="Email" required
-                                        id="email">
+                                    <input type="email" class="input-form__input" placeholder="Email" required id="email">
                                     <label class="input-form__label" for="email">Email</label>
                                 </div>
                                 <div class="input-form__container">
                                     <div class="radio-group">
                                         <input type="radio" class="form-radio-input" id="M" name="sex">
-                                        <label for="M" class="form-radio-label"><span class="form-radio-button"></span>M
-                                        </label>
+                                        <label for="M" class="form-radio-label"><span class="form-radio-button"></span>M</label>
                                     </div>
                                     <div class="radio-group">
                                         <input type="radio" class="form-radio-input" id="F" name="sex">
-                                        <label for="F" class="form-radio-label">
-                                            <span class="form-radio-button"></span>F
-                                        </label>
+                                        <label for="F" class="form-radio-label"><span class="form-radio-button"></span>F</label>
                                     </div>
 
                                 </div>
@@ -302,14 +265,9 @@
 
         <footer class="footer">
             <div class="footer__logo">
-                <a class="footer__logo__link" href="#"><svg class="footer__logo--svg" version="1.1" id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        viewBox="0 0 461.59 286.92" style="enable-background:new 0 0 461.59 286.92;"
-                        xml:space="preserve">
-                        <polyline class="st0"
-                            points="141,56.48 186.1,0.27 461,0.48 409.88,63.99 230.99,286.28 0.99,0.48 81.47,0.48 230.99,186.28 
-               329.42,63.98 345.22,44.99 329.12,44.99 230.99,166.28 191,116.48 248.93,44.98 230.84,44.97 180.99,106.28 " />
-                    </svg>&copy;vmwhoami <span class="footer__logo--name">Vitalie Melnic 2020</span>
+                <a class="footer__logo__link" href="#"><svg class="footer__logo--svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 461.59 286.92" style="enable-background:new 0 0 461.59 286.92;" xml:space="preserve">
+                        <polyline class="st0" points="141,56.48 186.1,0.27 461,0.48 409.88,63.99 230.99,286.28 0.99,0.48 81.47,0.48 230.99,186.28 329.42,63.98 345.22,44.99 329.12,44.99 230.99,166.28 191,116.48 248.93,44.98 230.84,44.97 180.99,106.28 " />
+                    </svg>&copy;vmwhoami <span class="footer__logo--name">Vitalie Melnic 2020-{{currentDate}}</span>
                 </a>
             </div>
         </footer>
@@ -317,22 +275,15 @@
         <div class="popup" id="popup">
             <div class="popup-container">
                 <div class="popup-img">
-                    <img srcset="img/SPH_2551-1.jpg 509w,img/SPH_2551.jpg 1200w"
-                        sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam" class="popup-img--img"
-                        alt="olea" src='img/SPH_2551-1.jpg'>
+                    <img srcset="img/SPH_2551-1.jpg 509w,img/SPH_2551.jpg 1200w" sizes="(max-width:900px) 20vw,(max-width:600px) 30vw,509px" alt="Adam" class="popup-img--img" src='img/SPH_2551-1.jpg'>
 
                 </div>
                 <div class="popup-content">
                     <h2 class="heading-secondary margin-top">
                         Super heading goes here
                     </h2>
-                    <p class="popup-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nihil,
-                        magnam mollitia,
-                        nostrum enim consectetur, illum est dignissimos praesentium ullam inventore repudiandae
-                        molestias modi itaque. Cupiditate alias modi aspernatur delectus.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur id nesciunt dolor facilis
-                        fugit maiores tempore! Aliquid omnis ratione delectus, pariatur distinctio quis eius? Dolor
-                        quidem fugiat illo inventore numquam.</p>
+                    <p>I’m Vitalie, a web developer and YouTuber recovering from brain surgery, passionate about combining art, dance, and code.</p>
+                    <p>With my wife by my side and our six-year-old son, a budding artist fluent in Chinese, we navigate life’s challenges, drawing inspiration from Jacque Fresco’s vision and our travels.</p>
                     <a class="btn-form-submit " href="#popup">Book now</a>
                     <a class="popup-close" href="#backface-feature">&times;</a>
 
@@ -340,6 +291,9 @@
             </div>
         </div>
     </div>
+   
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
