@@ -1,3 +1,5 @@
+@use "mixin";
+
 .video-background {
     // background-color: $color-grey-light1;
     margin-top: -10rem;
@@ -6,7 +8,7 @@
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
     z-index: 2;
 
-    @include respond(tablet-port) {
+    @include mixin.respond(tablet-port) {
         margin-top: -10rem;
         clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
 
@@ -50,7 +52,7 @@
     position: relative;
 
 
-    @include respond(tablet-port) {
+    @include mixin.respond(tablet-port) {
         top: 20%;
         height: 50%;
         width: 95%;

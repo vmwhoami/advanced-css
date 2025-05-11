@@ -1,3 +1,6 @@
+@use "mixin";
+@use "variables";
+
 .form {
     position: absolute;
     top: 0;
@@ -5,7 +8,7 @@
     max-width: 40rem;
     margin: 2rem;
 
-    @include respond(tablet-port) {
+    @include mixin.respond(tablet-port) {
         width: 70rem;
     }
 }
@@ -82,7 +85,7 @@
 .form-radio-button {
     height: 3rem;
     width: 3rem;
-    border: .5rem solid $gradient-color2;
+    border: .5rem solid variables.$gradient-color2;
     display: block;
     position: relative;
 
@@ -91,7 +94,7 @@
         display: block;
         height: 1.2rem;
         width: 1.2rem;
-        background-color: $gradient-color2;
+        background-color: variables.$gradient-color2;
 
         position: absolute;
         top: 50%;

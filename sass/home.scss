@@ -1,18 +1,21 @@
+@use "mixin";
+@use "variables";
+
 .section-about {
-    background-color: $color-grey-light1;
+    background-color: variables.$color-grey-light1;
     height: 100vh;
     padding: 5rem 0 0;
     margin-top: -5rem;
 
     p {
-        font-size: $psizes;
+        font-size: variables.$psizes;
     }
 
-    @include respond(tablet-port) {
+    @include mixin.respond(tablet-port) {
         height: 140vh;
     }
 
-    @include respond(phone) {
+    @include mixin.respond(phone) {
         height: 130vh;
     }
 }
@@ -27,11 +30,11 @@
     transform: skewY(-2deg);
     box-sizing: unset;
 
-    @include respond(tablet-port) {
+    @include mixin.respond(tablet-port) {
         height: 170vh;
     }
 
-    @include respond(phone) {
+    @include mixin.respond(phone) {
         height: 200vh;
     }
 
@@ -57,11 +60,11 @@
         background: linear-gradient(#e2495163, #e4217c6b);
         padding: 20rem 0;
 
-        @include respond(tablet-port) {
+        @include mixin.respond(tablet-port) {
             padding: 5rem 0;
         }
 
-        @include respond(tablet-land) {
+        @include mixin.respond(tablet-land) {
             padding: 20rem 0;
         }
 
@@ -98,16 +101,16 @@
 
 //section backface-feature
 .backface-feature {
-    background-color: $color-grey-light1;
+    background-color: variables.$color-grey-light1;
     height: 120vh;
     padding: 10rem 0 0;
     margin-top: -5rem;
 
-    @include respond(tablet-port) {
+    @include mixin.respond(tablet-port) {
         height: 220vh;
     }
 
-    @include respond(phone) {
+    @include mixin.respond(phone) {
         height: 210vh;
     }
 }

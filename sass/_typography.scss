@@ -1,23 +1,26 @@
+@use "mixin";
+@use "variables";
+
 .heading-secondary {
     position: relative;
     margin-bottom: 1rem;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: $h2sizes;
+    font-size: variables.$h2sizes;
     letter-spacing: 2px;
     display: inline-block;
-    background: $main-grad;
+    background: variables.$main-grad;
     background-position: top;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     transition: all .2s;
 
-    @include respond(tablet-port) {
+    @include mixin.respond(tablet-port) {
         font-size: 1.5rem
     }
 
-    @include respond(phone) {
+    @include mixin.respond(phone) {
         font-size: 1.2rem
     }
 
@@ -28,15 +31,15 @@
 }
 
 .theh3 {
-    font-size: $h3sizes;
+    font-size: variables.$h3sizes;
     margin: 2rem 1rem;
-    color: $gray-text;
+    color: variables.$gray-text;
 
-    @include respond(tablet-port) {
+    @include mixin.respond(tablet-port) {
         font-size: 1.5rem
     }
 
-    @include respond(phone) {
+    @include mixin.respond(phone) {
         font-size: 1.2rem
     }
 }

@@ -1,7 +1,9 @@
+@use "variables";
+
 .footer {
     height: 60vh;
     width: 100%;
-    background-color: $gray-text;
+    background-color: variables.$gray-text;
     position: relative;
     margin-top: -20rem;
 

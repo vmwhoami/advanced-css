@@ -1,3 +1,6 @@
+@use "mixin";
+@use "variables";
+
 //centering text
 .centering-text {
     text-align: center;
@@ -17,7 +20,7 @@
     position: relative;
     // margin-left: 20rem;
 
-    @include respond(tablet-port) {
+    @include mixin.respond(tablet-port) {
         width: 90%;
     }
 
@@ -27,7 +30,7 @@
         box-shadow: 0 0 4rem #303030;
         outline-offset: 1rem;
 
-        @include respond(tablet-port) {
+        @include mixin.respond(tablet-port) {
             width: 70%;
         }
 
@@ -35,7 +38,7 @@
             z-index: 100;
             top: 0;
             transform: scale(1.2) translateY(-2rem);
-            outline: 2rem solid $gradient-color1;
+            outline: 2rem solid variables.$gradient-color1;
         }
     }
 
@@ -46,7 +49,7 @@
         top: 4rem;
         left: 0;
 
-        @include respond(tablet-port) {
+        @include mixin.respond(tablet-port) {
             top: 0;
             left: 0;
         }
@@ -58,7 +61,7 @@
         left: 30%;
         z-index: 2;
 
-        @include respond(tablet-port) {
+        @include mixin.respond(tablet-port) {
             left: 22%;
             top: 20rem;
             z-index: 2;
@@ -70,7 +73,7 @@
         top: 2rem;
         left: 15%;
 
-        @include respond(tablet-port) {
+        @include mixin.respond(tablet-port) {
             top: 0;
             left: 45%;
         }

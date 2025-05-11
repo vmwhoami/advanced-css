@@ -1,19 +1,20 @@
-@import 'variables';
-@import 'mixin';
-@import "body";
-@import 'floats_grid';
-@import 'home';
-@import 'navigation';
-@import 'header';
-@import '_btn';
-@import 'card';
-@import 'story_feature';
-@import 'video';
-@import 'form';
-@import 'footer';
-@import 'popup';
-@import 'widgets';
-@import 'typography';
+@use "sass:meta";
+@use 'variables';
+@use 'mixin';
+@use "body";
+@use 'floats_grid';
+@use 'home';
+@use 'navigation';
+@use 'header';
+@use '_btn';
+@use 'card';
+@use 'story_feature';
+@use 'video';
+@use 'form';
+@use 'footer';
+@use 'popup';
+@use 'widgets';
+@use 'typography';
 
 
 
@@ -41,7 +42,7 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
-    @include respond(phone) {
+    @include mixin.respond(phone) {
         font-size: 1.5rem;
         letter-spacing: .5rem;
     }
@@ -53,7 +54,7 @@
     animation-duration: 1s;
     animation-timing-function: ease-in;
 
-    @include respond(phone) {
+    @include mixin.respond(phone) {
         font-size: 1rem;
         letter-spacing: .2rem;
     }
@@ -67,4 +68,4 @@
 
 /*     animations     */
 
-@import 'animations';
+@include meta.load-css('animations');
