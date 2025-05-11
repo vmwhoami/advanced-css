@@ -7,7 +7,7 @@
 
 > Building this project was fun as we practiced different CSS rules learned about new CSS tricks using pure CSS
 
-![screenshot](https://raw.githubusercontent.com/vmwhoami/advanced-css/work-home/img/Screenshot_1.jpg)
+![screenshot](https://raw.githubusercontent.com/vmwhoami/advanced-css/main/img/Screenshot_1.jpg)
 
 
 This project covers the following HTML and CSS3 concepts
@@ -25,7 +25,7 @@ This project covers the following HTML and CSS3 concepts
 
 ## Live Demo
 
-[Live Demo Link](https://gracious-lovelace-f8f389.netlify.app/)
+[Live Demo Link](https://advanced-scss-project.netlify.app/)
 
 ## Getting Started
 
