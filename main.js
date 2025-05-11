@@ -1,4 +1,3 @@
-// Grab the createApp function off the global Vue object:
 const { createApp } = Vue;
 
 createApp({
